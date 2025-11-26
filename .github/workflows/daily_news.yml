@@ -32,14 +32,19 @@ jobs:
         python scripts/editorial_bot.py
 
     - name: Salva modifiche e pubblica
-     - name: Salva modifiche e pubblica
       run: |
         git config --global user.name 'MarteVelvet Bot'
         git config --global user.email 'bot@martevelvet.com'
+        
+        # Aggiunge TUTTI i file modificati (news, marquee, ecc.)
         git add .
+        
+        # Crea il commit solo se ci sono modifiche
         git commit -m "Nuovo articolo generato da Gemini" || echo "Nessuna modifica da salvare"
         
-        # QUESTA È LA RIGA MAGICA CHE RISOLVE L'ERRORE:
+        # FONDAMENTALE: Scarica le modifiche remote prima di caricare le nuove
+        # Questo evita l'errore "rejected" che hai visto prima
         git pull --rebase origin main
         
+        # Carica tutto online
         git push
