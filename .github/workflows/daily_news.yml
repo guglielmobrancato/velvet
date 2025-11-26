@@ -2,7 +2,7 @@ name: Redazione Marte Velvet
 
 on:
   schedule:
-    # Esegue ogni giorno alle 08:00 UTC (che sono le 09:00 o 10:00 in Italia)
+    # Esegue ogni giorno alle 08:00 UTC (le 09:00 o 10:00 in Italia)
     - cron: '0 8 * * *'
   workflow_dispatch: # Permette di avviarlo a mano per testare
 
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Fondamentale: dà il permesso al bot di scrivere nel repo
+      contents: write # Dà il permesso al bot di scrivere nel repo
 
     steps:
     - name: Checkout del codice
@@ -19,7 +19,7 @@ jobs:
     - name: Imposta Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
+        python-version: '3.11' # Versione aggiornata per Gemini
 
     - name: Installa librerie
       run: |
@@ -35,6 +35,7 @@ jobs:
       run: |
         git config --global user.name 'MarteVelvet Bot'
         git config --global user.email 'bot@martevelvet.com'
-        git add index.html
+        # IL PUNTO QUI SOTTO È FONDAMENTALE: Salva TUTTI i file modificati (cinema.html, musica.html)
+        git add .
         git commit -m "Nuovo articolo generato da Gemini" || echo "Nessuna modifica da salvare"
         git push
