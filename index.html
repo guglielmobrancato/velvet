@@ -13,56 +13,97 @@
             --accent-red: #800020;
             --accent-orange: #cc5500;
         }
-        body { margin: 0; background-color: var(--bg-vinyl); font-family: 'Courier Prime', monospace; overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+
+        body { 
+            margin: 0; 
+            background-color: var(--bg-vinyl); 
+            font-family: 'Courier Prime', monospace; 
+            overflow: hidden; /* Niente scroll nella home */
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+        }
         
+        /* EFFETTO PELLICOLA ROVINATA */
         .grain-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; opacity: 0.05;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* HEADER CENTRALE */
+        /* TITOLO CENTRALE FLUTTUANTE */
         .portal-header {
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            z-index: 100; text-align: center; pointer-events: none; /* Lascia cliccare sotto */
-            mix-blend-mode: exclusion; /* Effetto fusione figo */
+            z-index: 100; text-align: center; pointer-events: none; 
+            mix-blend-mode: exclusion; /* Si fonde con i colori sotto */
         }
         h1 {
             font-family: 'Playfair Display', serif; font-size: 6vw; color: #fff; margin: 0; text-transform: uppercase; line-height: 0.8;
         }
-        .magazine-script {
-            font-family: 'Great Vibes', cursive; /* Font Vintage Richiesto */
-            font-size: 4vw; color: var(--text-gold); display: block; margin-top: -10px; transform: rotate(-5deg); text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        .velvet-script {
+            font-family: 'Great Vibes', cursive; /* Font Vintage */
+            font-size: 5vw; color: var(--text-gold); display: block; margin-top: -15px; transform: rotate(-5deg); 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
-        /* SPLIT SCREEN */
+        /* SPLIT SCREEN (Cinema vs Musica) */
         .split-container { display: flex; width: 100%; height: 100vh; }
+        
         .split {
             flex: 1; display: flex; align-items: center; justify-content: center;
-            transition: 0.5s; position: relative; text-decoration: none; border: 1px solid #333;
+            transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Animazione fluida */
+            position: relative; text-decoration: none; border: 1px solid #333;
+            background-size: cover; background-position: center;
         }
-        .split:hover { flex: 1.5; background-color: #222; }
+        
+        /* Sfondi Scuri (Puoi sostituirli con immagini vere se vuoi) */
+        .cinema-zone { background: radial-gradient(circle at center, #2a2a2a 0%, #000 100%); }
+        .music-zone { background: radial-gradient(circle at center, #2f1a1a 0%, #000 100%); }
+
+        /* Effetto Hover: Uno si allarga, l'altro si stringe */
+        .split:hover { flex: 2; filter: brightness(1.2); }
         
         .split-title {
             font-size: 2rem; color: var(--text-silver); text-transform: uppercase; letter-spacing: 5px; font-weight: bold;
-            z-index: 10; transition: 0.3s;
+            z-index: 10; transition: 0.3s; border: 2px solid transparent; padding: 10px 20px;
         }
-        .split:hover .split-title { color: var(--text-gold); transform: scale(1.2); }
+        
+        .split:hover .split-title { 
+            color: var(--text-gold); 
+            border-color: var(--text-gold);
+            letter-spacing: 8px;
+        }
 
-        /* SFONDI (Opzionale: puoi mettere immagini qui) */
-        .cinema-zone { background: radial-gradient(circle, #2a2a2a 0%, #000 100%); }
-        .music-zone { background: radial-gradient(circle, #2f1a1a 0%, #000 100%); }
+        /* FOOTER DISCLAIMER */
+        .disclaimer-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 0.7rem;
+            z-index: 200;
+            background: rgba(0,0,0,0.5); /* Leggero sfondo per leggibilità */
+            backdrop-filter: blur(2px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .disclaimer-bar a { color: #888; text-decoration: none; border-bottom: 1px dotted #888; transition:0.3s;}
+        .disclaimer-bar a:hover { color: var(--text-gold); border-color: var(--text-gold); }
 
         @media (max-width: 768px) {
             .split-container { flex-direction: column; }
-            h1 { font-size: 15vw; } .magazine-script { font-size: 10vw; }
+            h1 { font-size: 15vw; } .velvet-script { font-size: 12vw; margin-top: -5px; }
+            .split-title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
+    
     <div class="grain-overlay"></div>
     
     <div class="portal-header">
-        <h1>Marte<br><span class="magazine-script">Magazine</span></h1>
+        <h1>Marte<br><span class="velvet-script">Velvet</span></h1>
     </div>
 
     <div class="split-container">
@@ -73,5 +114,11 @@
             <span class="split-title">Musica</span>
         </a>
     </div>
+
+    <div class="disclaimer-bar">
+        Contenuti generati interamente da Intelligenza Artificiale • 
+        Info & Contatti: <a href="mailto:velvet@martestudios.com">velvet@martestudios.com</a>
+    </div>
+
 </body>
 </html>
