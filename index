@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marte Velvet | Cinema & Sound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-vinyl: #1a1a1a;
+            --text-gold: #d4af37;
+            --text-silver: #c0c0c0;
+            --accent-red: #800020; /* Burgundy */
+            --accent-orange: #cc5500; /* Burnt Orange */
+            --paper: #f4e4bc;
+        }
+
+        body {
+            background-color: var(--bg-vinyl);
+            color: var(--text-silver);
+            font-family: 'Courier Prime', monospace; /* Effetto macchina da scrivere */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFFETTO GRANA (NOISE) SOPRA TUTTO IL SITO */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* HEADER STILE RIVISTA */
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--text-gold);
+            background: linear-gradient(180deg, #111 0%, #1a1a1a 100%);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--text-gold);
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            line-height: 0.9;
+        }
+
+        h1 span {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            display: block;
+            letter-spacing: 5px;
+            font-family: 'Courier Prime', monospace;
+            margin-top: 10px;
+        }
+
+        .tagline {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--text-silver);
+            opacity: 0.7;
+        }
+
+        /* GRIGLIA ARTICOLI */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        /* STILE ARTICOLO VINTAGE */
+        article {
+            border-bottom: 1px solid #333;
+            padding-bottom: 3rem;
+        }
+
+        .meta-data {
+            font-size: 0.8rem;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--text-gold);
+            padding-left: 10px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #e0e0e0;
+            margin: 10px 0;
+            line-height: 1.1;
+        }
+
+        .article-title a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        .article-title a:hover {
+            color: var(--text-gold);
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            color: #bbb;
+            text-align: justify;
+        }
+
+        /* IMMAGINI DESATURATE */
+        .article-img {
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            filter: sepia(40%) contrast(110%) grayscale(30%); /* FILTRO ANNI 70 */
+            border: 1px solid #333;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grain-overlay"></div>
+
+    <header>
+        <h1>Marte<br>Velvet<span>Magazine</span></h1>
+        <p class="tagline">Cronache analogiche di Cinema & Musica. Est. 2025</p>
+    </header>
+
+    <div class="container">
+        <div class="grid" id="content-feed">
+            
+            <article>
+                <div class="meta-data">CINEMA • BOX OFFICE • 26 NOV 2025</div>
+                <h2 class="article-title"><a href="#">Il Botteghino Piange, Ma il Cinema Respira Ancora?</a></h2>
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop" class="article-img" alt="Cinema">
+                <div class="article-body">
+                    <p>I dati Cinetel di questa mattina parlano chiaro, gente. Le sale sono vuote come una discoteca alle 8 di mattina, ma c'è un sottobosco che freme. Mentre i blockbuster americani pompano muscoli sterili, il cinema italiano cerca la sua anima tra le pieghe dei finanziamenti statali e le nuove leggi sul Tax Credit. È un gioco duro, ma qualcuno deve pur farlo.</p>
+                    <p><i>[Analisi generata automaticamente da Marte Velvet AI]</i></p>
+                </div>
+            </article>
+
+            <article>
+                <div class="meta-data">MUSICA • FUNKY • 26 NOV 2025</div>
+                <h2 class="article-title"><a href="#">Napoli Centrale: Quando il Vesuvio Aveva il Groove</a></h2>
+                <img src="https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=1000&auto=format&fit=crop" class="article-img" alt="Vinyl">
+                <div class="article-body">
+                    <p>Mettiamo da parte le classifiche trap per un secondo, ok? Facciamo un salto indietro. Ho ripescato un vinile del '75 che scotta ancora. Il "Neapolitan Power" non era solo musica, era sudore, rabbia e linee di basso che ti entravano nello stomaco. Oggi analizzeremo perché quelle sonorità stanno tornando prepotentemente nelle campionature dei producer milanesi.</p>
+                    <p><i>[Analisi generata automaticamente da Marte Velvet AI]</i></p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Marte Velvet. Powered by Gemini 2.0 & GitHub Actions.<br>
+        Solo per veri audiofili e cinefili.
+    </footer>
+
+</body>
+</html>
