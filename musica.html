@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marte Velvet | Musica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:wght@900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #111; --gold: #d4af37; --silver: #aaa; --orange: #cc5500; }
+        body { background: var(--bg); color: var(--silver); font-family: 'Courier Prime', monospace; margin: 0; }
+        a { color: inherit; text-decoration: none; }
+
+        .marquee-container {
+            background: var(--orange); color: #fff; padding: 10px 0; overflow: hidden; white-space: nowrap; border-bottom: 2px solid #000;
+        }
+        .marquee-content {
+            display: inline-block; padding-left: 100%; animation: scroll 20s linear infinite; font-weight: bold; text-transform: uppercase;
+        }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+        header { text-align: center; padding: 2rem; border-bottom: 1px solid #333; }
+        .logo { font-family: 'Playfair Display'; font-size: 2.5rem; color: #fff; }
+        .back-btn { display: inline-block; margin-top:10px; font-size: 0.8rem; color: var(--orange); text-transform: uppercase; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .section-label { color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        
+        .vintage-box { background: #181010; border: 1px solid #442222; padding: 2rem; margin-top: 4rem; position: relative; }
+        .vintage-badge { position: absolute; top: -15px; right: 20px; background: var(--orange); color: #fff; padding: 5px 15px; font-family: 'Great Vibes'; font-size: 1.5rem; transform: rotate(-5deg); }
+
+        h2 { font-family: 'Playfair Display'; font-size: 2rem; color: #fff; margin-top: 0; }
+        .article-img { width: 100%; filter: sepia(60%) contrast(1.2); border: 1px solid #333; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-content" id="archive-marquee">
+            ARCHIVIO MARTE VELVET /// BENVENUTI NELLA SEZIONE MUSICA /// IL GROOVE NON DORME MAI /// 
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">Musica</div>
+        <a href="index.html" class="back-btn">← Torna alla Hall</a>
+    </header>
+
+    <div class="container">
+        
+        <span class="section-label">FRESH FROM THE PRESS</span>
+        <div id="news-feed">
+            <article>
+                <h2>Sintonizzazione Frequenze...</h2>
+                <p>Il bot sta ascoltando i vinili...</p>
+            </article>
+        </div>
+
+        <div class="vintage-box">
+            <div class="vintage-badge">Vinyl Gold</div>
+            <div id="vintage-feed">
+                <h2>Cerca nei bauli in soffitta...</h2>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
