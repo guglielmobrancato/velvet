@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marte Velvet | Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:wght@900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-vinyl: #1a1a1a;
             --text-gold: #d4af37;
             --text-silver: #c0c0c0;
-            --accent-red: #800020;
             --accent-orange: #cc5500;
         }
 
@@ -18,83 +17,87 @@
             margin: 0; 
             background-color: var(--bg-vinyl); 
             font-family: 'Courier Prime', monospace; 
-            overflow: hidden; /* Niente scroll nella home */
+            overflow: hidden; 
             height: 100vh; 
             display: flex; 
             flex-direction: column; 
         }
         
-        /* EFFETTO PELLICOLA ROVINATA */
+        /* EFFETTO PELLICOLA ROVINATA (GRANA) */
         .grain-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; opacity: 0.05;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* TITOLO CENTRALE FLUTTUANTE */
+        /* TITOLO CENTRALE "SERIO" */
         .portal-header {
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             z-index: 100; text-align: center; pointer-events: none; 
-            mix-blend-mode: exclusion; /* Si fonde con i colori sotto */
-        }
-        h1 {
-            font-family: 'Playfair Display', serif; font-size: 6vw; color: #fff; margin: 0; text-transform: uppercase; line-height: 0.8;
-        }
-        .velvet-script {
-            font-family: 'Great Vibes', cursive; /* Font Vintage */
-            font-size: 5vw; color: var(--text-gold); display: block; margin-top: -15px; transform: rotate(-5deg); 
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            mix-blend-mode: exclusion;
         }
 
-        /* SPLIT SCREEN (Cinema vs Musica) */
+        h1 {
+            font-family: 'Playfair Display', serif; 
+            font-size: 7vw; 
+            color: #fff; 
+            margin: 0; 
+            letter-spacing: -3px; 
+            text-transform: uppercase; 
+            line-height: 0.85; /* Leggermente più alto per staccare le due parole */
+        }
+
+        /* STILE "VELVET" MODIFICATO: Stesso font, colore diverso */
+        .subtitle-style {
+            display: block;
+            font-family: 'Playfair Display', serif; /* Stesso font di Marte */
+            font-size: 7vw; /* Stessa dimensione di Marte */
+            color: var(--text-gold); /* Colore diverso */
+            letter-spacing: -3px; /* Stesso tracking stretto */
+            margin-top: 0;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        /* SPLIT SCREEN */
         .split-container { display: flex; width: 100%; height: 100vh; }
         
         .split {
             flex: 1; display: flex; align-items: center; justify-content: center;
-            transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Animazione fluida */
+            transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
             position: relative; text-decoration: none; border: 1px solid #333;
             background-size: cover; background-position: center;
         }
         
-        /* Sfondi Scuri (Puoi sostituirli con immagini vere se vuoi) */
         .cinema-zone { background: radial-gradient(circle at center, #2a2a2a 0%, #000 100%); }
         .music-zone { background: radial-gradient(circle at center, #2f1a1a 0%, #000 100%); }
 
-        /* Effetto Hover: Uno si allarga, l'altro si stringe */
         .split:hover { flex: 2; filter: brightness(1.2); }
         
         .split-title {
-            font-size: 2rem; color: var(--text-silver); text-transform: uppercase; letter-spacing: 5px; font-weight: bold;
-            z-index: 10; transition: 0.3s; border: 2px solid transparent; padding: 10px 20px;
+            font-size: 1.5rem; color: var(--text-silver); text-transform: uppercase; letter-spacing: 5px; font-weight: bold;
+            z-index: 10; transition: 0.3s; border: 1px solid transparent; padding: 10px 30px;
         }
         
         .split:hover .split-title { 
             color: var(--text-gold); 
             border-color: var(--text-gold);
             letter-spacing: 8px;
+            background: rgba(0,0,0,0.4);
         }
 
         /* FOOTER DISCLAIMER */
         .disclaimer-bar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 15px;
-            color: #666;
-            font-size: 0.7rem;
-            z-index: 200;
-            background: rgba(0,0,0,0.5); /* Leggero sfondo per leggibilità */
-            backdrop-filter: blur(2px);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            position: fixed; bottom: 0; width: 100%; text-align: center; padding: 15px;
+            color: #666; font-size: 0.7rem; z-index: 200;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(2px);
+            text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid #222;
         }
         .disclaimer-bar a { color: #888; text-decoration: none; border-bottom: 1px dotted #888; transition:0.3s;}
         .disclaimer-bar a:hover { color: var(--text-gold); border-color: var(--text-gold); }
 
         @media (max-width: 768px) {
             .split-container { flex-direction: column; }
-            h1 { font-size: 15vw; } .velvet-script { font-size: 12vw; margin-top: -5px; }
-            .split-title { font-size: 1.5rem; }
+            h1, .subtitle-style { font-size: 18vw; } 
         }
     </style>
 </head>
@@ -103,7 +106,7 @@
     <div class="grain-overlay"></div>
     
     <div class="portal-header">
-        <h1>Marte<br><span class="velvet-script">Velvet</span></h1>
+        <h1>Marte<br><span class="subtitle-style">Velvet</span></h1>
     </div>
 
     <div class="split-container">
