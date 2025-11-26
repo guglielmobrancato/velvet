@@ -32,10 +32,14 @@ jobs:
         python scripts/editorial_bot.py
 
     - name: Salva modifiche e pubblica
+     - name: Salva modifiche e pubblica
       run: |
         git config --global user.name 'MarteVelvet Bot'
         git config --global user.email 'bot@martevelvet.com'
-        # IL PUNTO QUI SOTTO È FONDAMENTALE: Salva TUTTI i file modificati (cinema.html, musica.html)
         git add .
         git commit -m "Nuovo articolo generato da Gemini" || echo "Nessuna modifica da salvare"
+        
+        # QUESTA È LA RIGA MAGICA CHE RISOLVE L'ERRORE:
+        git pull --rebase origin main
+        
         git push
