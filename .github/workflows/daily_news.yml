@@ -1,0 +1,40 @@
+name: Redazione Marte Velvet
+
+on:
+  schedule:
+    # Esegue ogni giorno alle 08:00 UTC (che sono le 09:00 o 10:00 in Italia)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Permette di avviarlo a mano per testare
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Fondamentale: dà il permesso al bot di scrivere nel repo
+
+    steps:
+    - name: Checkout del codice
+      uses: actions/checkout@v3
+
+    - name: Imposta Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Installa librerie
+      run: |
+        pip install -r requirements.txt
+
+    - name: Esegui Editoriale Bot
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        python scripts/editorial_bot.py
+
+    - name: Salva modifiche e pubblica
+      run: |
+        git config --global user.name 'MarteVelvet Bot'
+        git config --global user.email 'bot@martevelvet.com'
+        git add index.html
+        git commit -m "Nuovo articolo generato da Gemini" || echo "Nessuna modifica da salvare"
+        git push
