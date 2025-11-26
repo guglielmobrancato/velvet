@@ -1,0 +1,5 @@
+google-generativeai
+feedparser
+beautifulsoup4
+requests
+lxml
