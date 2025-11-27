@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "Troll 2.0: Apocalisse Mockbuster Scandinava",
+            "author": "Astrid Bjornstad",
+            "excerpt": "Che la terra ci protegga. *Troll 2.0*, ultima fatica di un genere morente (il mockbuster, ovviamente), \u00e8 un'accozzaglia di effetti CGI discutibili e dialoghi tanto imbarazzanti da far resuscitare Bergman per la vergogna. Un gigantesco kaiju scandinavo, frutto di un esperimento genetico fallito, devasta Malm\u00f6 in una sequenza di distruzione priva di qualsivoglia sottotesto. Eppure, in questo caos organizzato, si percepisce un'ironia consapevole, una strizzatina d'occhio al trash che lo eleva al di sopra del semplice film brutto. Se cercate la profondit\u00e0, rivolgetevi altrove; se invece siete pronti a spegnere il cervello e godervi lo spettacolo, *Troll 2.0* \u00e8 un guilty pleasure da non perdere. Prendetevi un drink e buona visione.",
+            "vote": "6/10",
+            "streaming_search_query": "Troll 2.0 film 2050",
+            "date": "27.11.2025"
+        },
+        {
             "title": "Sir\u0101t: Miraggi Sonori nel Deserto Digitale",
             "author": "Xylar V.",
             "excerpt": "Sir\u0101t emerge come un'esperienza audiovisiva singolare, pur inciampando in alcune delle sue ambizioni. La regia, spesso ipnotica, cattura l'aridit\u00e0 e la vastit\u00e0 del deserto marocchino con una fotografia che gioca sapientemente con luci e ombre. La colonna sonora, elemento centrale, pulsa con ritmi tribali e accenni di elettronica, creando un'atmosfera onirica e a tratti ansiogena. Tuttavia, la narrazione frammentata e la rarefazione dei dialoghi rischiano di allontanare lo spettatore, lasciandolo in un limbo di simbolismi non sempre decifrabili. Il potenziale \u00e8 evidente, ma l'esecuzione risulta a tratti discontinua. Un viaggio sensoriale intrigante, ma non del tutto compiuto.",
@@ -15,17 +23,17 @@ const mshData = {
             "vote": "8.8/10",
             "streaming_search_query": "Dune: Parte Due",
             "date": "27.11.2025"
-        },
-        {
-            "title": "SYSTEM ONLINE",
-            "author": "VELVET AI",
-            "date": "2050.11.27",
-            "excerpt": "Terminale attivo. In attesa di dati dalla Terra.",
-            "image_url": "",
-            "streaming_search_query": ""
         }
     ],
     "music": [
+        {
+            "title": "Cosmic Echoes: 'Nebula Bloom' dei Sol Invictus Algorithm",
+            "author": "Xantus-7",
+            "excerpt": "I Sol Invictus Algorithm, pionieri del synth-wave atmosferico, tornano con 'Nebula Bloom', un EP che espande il loro sound trademark verso territori inesplorati. Le texture sonore sono stratificate con una precisione chirurgica, evocando paesaggi sonori interstellari che ricordano le colonne sonore di 'Stranger Things', ma con un'anima pi\u00f9 riflessiva. La voce robotica, filtrata attraverso algoritmi complessi, trasmette una malinconia profonda, a tratti straziante. Nonostante la perfezione tecnica, a volte manca quella scintilla di spontaneit\u00e0 che caratterizzava i loro primi lavori. Un ascolto ipnotico, ma con margine di crescita emotiva. La title track \u00e8 un gioiello. Consigliato agli amanti di Boards of Canada e Tycho.",
+            "vote": "8/10",
+            "streaming_search_query": "Sol Invictus Algorithm - Nebula Bloom EP",
+            "date": "27.11.2025"
+        },
         {
             "title": "TEMS: 'Love Is A Kingdom' - Frammenti Stellari d'Amore",
             "author": "Xylar V.",
