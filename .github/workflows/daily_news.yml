@@ -29,7 +29,6 @@ jobs:
     - name: Run Martian Bot
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      # Percorso corretto verso la tua cartella scripts
       run: python scripts/editorial_bot.py
 
     - name: Commit & Publish
@@ -38,6 +37,5 @@ jobs:
         git config --global user.email 'bot@velvet.com'
         git add data.js
         git diff --quiet && git diff --staged --quiet || git commit -m "Velvet Update"
-        git pull --rebase origin main
-        # ECCO LA CORREZIONE: PUSH con una H sola!
-        git push
+        # IL FIX È QUI SOTTO:
+        git push -f origin main
