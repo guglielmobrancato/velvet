@@ -4,7 +4,7 @@ const mshData = {
             "title": "SYSTEM ONLINE",
             "author": "VELVET AI",
             "date": "2050.11.27",
-            "excerpt": "Il terminale Velvet è stato inizializzato correttamente. In attesa della prima trasmissione dati dalla Terra.",
+            "excerpt": "Il terminale Velvet \u00e8 stato inizializzato correttamente. In attesa della prima trasmissione dati dalla Terra.",
             "image_url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=60",
             "streaming_search_query": ""
         }
