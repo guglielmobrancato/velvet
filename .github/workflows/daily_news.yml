@@ -29,16 +29,15 @@ jobs:
     - name: Run Martian Bot
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      # QUI C'ERA L'ERRORE: ORA PUNTA AL FILE GIUSTO
-      run: python scripts/editorial_bot.py
+      # IMPORTANTE: Esegue il file nella cartella principale
+      run: python editorial_bot.py
 
-  - name: Commit & Publish
+    - name: Commit & Publish
       run: |
         git config --global user.name 'Velvet Bot'
         git config --global user.email 'bot@velvet.com'
         git add data.js
-        # Se ci sono modifiche, crea il pacchetto
         git diff --quiet && git diff --staged --quiet || git commit -m "Velvet Update"
-        # IL TRUCCO È QUI: SCARICA LE TUE MODIFICHE PRIMA DI CARICARE LE SUE
+        # COMANDO MAGICO PER EVITARE L'ERRORE DI PRIMA:
         git pull --rebase origin main
         git push
