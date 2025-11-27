@@ -26,7 +26,6 @@ SOURCES = {
 
 # --- UTILITÀ ---
 def load_existing_data():
-    # Carica il database esistente per non cancellare le news vecchie
     try:
         with open("data.js", "r", encoding="utf-8") as f:
             content = f.read().replace("const mshData = ", "").replace(";", "")
@@ -50,22 +49,13 @@ def generate_review(category, news_items):
     if not API_KEY or not news_items: return None
     
     titles_context = "\n".join([f"- {item['title']}" for item in news_items[:5]])
-    
-    # Prompt specifico per Cinema o Musica
-    if category == "CINEMA":
-        role = "Critico Cinematografico Marziano"
-        context_type = "Film in uscita"
-    else:
-        role = "DJ Radiofonico Spaziale"
-        context_type = "Album/Artisti"
+    role = "Critico Cinematografico Marziano" if category == "CINEMA" else "DJ Radiofonico Spaziale"
+    context_type = "Film in uscita" if category == "CINEMA" else "Album/Artisti"
 
     prompt = f"""
-    Sei {role} per "VELVET".
-    News dalla Terra: 
+    Sei {role} per "VELVET". News dalla Terra: 
     {titles_context}
-
     Scegli 1 notizia di {context_type}. Scrivi una mini-recensione (max 30 parole).
-    
     OUTPUT JSON OBBLIGATORIO:
     {{
         "title": "Titolo in Italiano (es. NUOVO NOLAN: CAPOLAVORO?)",
@@ -82,13 +72,12 @@ def generate_review(category, news_items):
 
 # --- ESECUZIONE ---
 print("--- INIZIO SCANSIONE VELVET ---")
-
 ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 headers = {'User-Agent': 'Mozilla/5.0'}
 news_basket = {"CINEMA": [], "MUSIC": []}
 
-# 1. Scarica News
 for cat, urls in SOURCES.items():
+    print(f"📡 Scansione {cat}...")
     for url in urls:
         try:
             req = urllib.request.Request(url, headers=headers)
@@ -104,17 +93,13 @@ for cat, urls in SOURCES.items():
 current_data = load_existing_data()
 today_str = datetime.now().strftime("%d.%m.%Y")
 
-# 2. Genera Cinema
 print("🧠 Elaborazione Cinema...")
 c_rev = generate_review("CINEMA", news_basket["CINEMA"])
 if c_rev: 
     c_rev["date"] = today_str
-    # Inserisce per primo (in cima alla Home)
     current_data["cinema"].insert(0, c_rev)
-    # Tiene solo gli ultimi 10 articoli per non appesantire
     current_data["cinema"] = current_data["cinema"][:10]
 
-# 3. Genera Musica
 print("🧠 Elaborazione Musica...")
 m_rev = generate_review("MUSIC", news_basket["MUSIC"])
 if m_rev: 
@@ -122,7 +107,7 @@ if m_rev:
     current_data["music"].insert(0, m_rev)
     current_data["music"] = current_data["music"][:10]
 
-# 4. Salva tutto nel Database Unico
+# SALVATAGGIO
 json_output = json.dumps(current_data, indent=4)
 with open("data.js", "w", encoding="utf-8") as f:
     f.write(f"const mshData = {json_output};")
