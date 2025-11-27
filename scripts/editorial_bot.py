@@ -14,12 +14,13 @@ print("------------------------------------------------")
 if API_KEY:
     print("✅ DEBUG: Chiave API trovata. Inizializzazione Velvet Terminal...")
     genai.configure(api_key=API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash') 
+    # MODELLO CORRETTO: GEMINI 2.0 FLASH
+    model = genai.GenerativeModel('gemini-2.0-flash') 
 else:
     print("❌ DEBUG: NESSUNA CHIAVE TROVATA. Sistema offline.")
 print("------------------------------------------------")
 
-# --- NUOVE FONTI (SOLO RECENSIONI DI COSE USCITE) ---
+# --- FONTI RSS (RECENSIONI VERE) ---
 SOURCES = {
     # Roger Ebert & Guardian Film Reviews (Solo film usciti)
     "CINEMA": [
@@ -66,14 +67,14 @@ def generate_review(category, news_items):
         role = "Critico Cinematografico d'Essai (Marte 2050)"
         task = """
         Scegli DALLA LISTA un film che è APPENA USCITO (Recensione).
-        Se la lista contiene solo gossip o film vecchi, IGNORALA e scegli tu un film importante uscito realmente sulla Terra negli ultimi 3-6 mesi (es. un film di Nolan, Villeneuve, Lanthimos, blockbuster o indie acclamato).
+        Se la lista contiene solo gossip o è vuota, IGNORALA e scegli tu un film importante uscito realmente sulla Terra negli ultimi 3-6 mesi (es. un film di Nolan, Villeneuve, Lanthimos, blockbuster o indie acclamato).
         Devi recensire un film che il lettore può guardare OGGI.
         """
     else:
         role = "Critico Musicale Underground (Marte 2050)"
         task = """
         Scegli DALLA LISTA un album APPENA USCITO.
-        Se la lista è vuota o irrilevante, scegli tu un album importante uscito negli ultimi 3 mesi (Rock, Elettronica, Rap, Indie).
+        Se la lista è vuota, scegli tu un album importante uscito negli ultimi 3 mesi (Rock, Elettronica, Rap, Indie).
         Devi recensire musica che il lettore può ascoltare OGGI.
         """
 
@@ -110,7 +111,7 @@ def generate_review(category, news_items):
         return None
 
 # --- ESECUZIONE ---
-print("--- INIZIO SCANSIONE VELVET (MODE: REVIEWS ONLY) ---")
+print("--- INIZIO SCANSIONE VELVET (GEMINI 2.0) ---")
 ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 headers = {'User-Agent': 'Mozilla/5.0'}
 news_basket = {"CINEMA": [], "MUSIC": []}
@@ -125,7 +126,7 @@ for cat, urls in SOURCES.items():
                 tree = ET.fromstring(response.read())
                 items = tree.findall(".//item")
                 if not items: items = tree.findall("{http://purl.org/rss/1.0/}item")
-                for item in items[:5]: # Prendiamo più item per dare scelta
+                for item in items[:5]: 
                     t = item.find("title").text
                     news_basket[cat].append({"title": t})
         except: pass
@@ -139,7 +140,7 @@ c_rev = generate_review("CINEMA", news_basket["CINEMA"])
 if c_rev and c_rev.get("title"): 
     c_rev["date"] = today_str
     current_data["cinema"].insert(0, c_rev)
-    current_data["cinema"] = current_data["cinema"][:10] # Max 10 recensioni
+    current_data["cinema"] = current_data["cinema"][:10] 
     print(f"✅ Cinema aggiunto: {c_rev['title']}")
 
 # Genera Musica
@@ -148,8 +149,12 @@ m_rev = generate_review("MUSIC", news_basket["MUSIC"])
 if m_rev and m_rev.get("title"): 
     m_rev["date"] = today_str
     current_data["music"].insert(0, m_rev)
-    current_data["music"] = current_data["music"][:10] # Max 10 recensioni
+    current_data["music"] = current_data["music"][:10] 
     print(f"✅ Musica aggiunta: {m_rev['title']}")
 
 # SALVATAGGIO
-json
+json_output = json.dumps(current_data, indent=4)
+with open("data.js", "w", encoding="utf-8") as f:
+    f.write(f"const mshData = {json_output};")
+
+print("--- UPDATE COMPLETATO ---")
