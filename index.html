@@ -21,25 +21,26 @@
         /* CARD SOLO TESTO */
         .holo-card { background: rgba(15, 15, 20, 0.8); border: 1px solid rgba(0, 243, 255, 0.2); border-left: 4px solid var(--neon-blue); border-radius: 4px; overflow: hidden; transition: 0.4s; position: relative; backdrop-filter: blur(5px); padding: 25px; }
         .holo-card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 243, 255, 0.1); transform: translateY(-3px); }
-        
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
         .card-meta { font-size: 0.8rem; color: var(--mars-dust); text-transform: uppercase; }
         .card-vote { font-family: 'Orbitron'; font-size: 1.2rem; color: var(--neon-blue); font-weight: bold; border: 1px solid var(--neon-blue); padding: 2px 8px; border-radius: 4px; }
-        
         .card-title { font-size: 1.6rem; margin: 0 0 15px 0; line-height: 1.2; color: #fff; }
         .card-excerpt { color: #ccc; font-size: 1.1rem; line-height: 1.6; text-align: justify; margin-bottom: 20px; font-weight: 300; }
-        
         .stream-links { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
         .stream-btn { display: inline-flex; align-items: center; gap: 10px; color: var(--neon-blue); text-decoration: none; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
         .stream-btn:hover { color: #fff; letter-spacing: 1px; }
-        
         .music-style .holo-card { border-left-color: var(--neon-purple); }
         .music-style .card-vote, .music-style .stream-btn { color: var(--neon-purple); border-color: var(--neon-purple); }
         .music-style .stream-btn:hover { color: #fff; }
 
+        /* ARCHIVIO SCORREVOLE */
         .archive-container { background: rgba(5, 7, 10, 0.8); border: 1px solid var(--mars-dust); padding: 30px; margin-top: 50px;}
-        .archive-list { list-style: none; padding: 0; }
+        .archive-list { list-style: none; padding: 0; max-height: 300px; overflow-y: auto; padding-right: 10px; }
+        .archive-list::-webkit-scrollbar { width: 5px; }
+        .archive-list::-webkit-scrollbar-track { background: #111; }
+        .archive-list::-webkit-scrollbar-thumb { background: var(--mars-dust); border-radius: 5px; }
         .archive-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid rgba(193, 68, 14, 0.3); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
+        
         footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem; margin-top: 60px; border-top: 1px solid var(--glass-bg); }
     </style>
 </head>
@@ -49,7 +50,6 @@
         <div class="terminal-status mono-font">MARS LINK: ONLINE</div>
     </nav>
     <div class="container">
-        
         <div class="section-header"><i class="fas fa-film section-icon"></i><h2 class="section-title">CINEMA CRITIQUE</h2></div>
         <div class="grid-layout" id="cinema-container"></div>
         
@@ -71,6 +71,9 @@
             const archiveList = document.getElementById('archive-list');
 
             function createTextCard(item, type) {
+                // FILTRO VISIVO: NASCONDE "SYSTEM ONLINE" O TITOLI VUOTI
+                if (!item.title || item.title === "SYSTEM ONLINE" || item.title === "N/A") return '';
+
                 let vote = item.vote || "N/A";
                 let searchUrl = type === 'music' 
                     ? `https://open.spotify.com/search/${encodeURIComponent(item.streaming_search_query || '')}`
@@ -102,7 +105,13 @@
             else musicCont.innerHTML = '<div style="color:#666">Nessun dato audio.</div>';
 
             const allItems = [...(mshData.cinema || []), ...(mshData.music || [])];
-            if (allItems.length > 0) archiveList.innerHTML = allItems.map(item => `<li class="archive-item"><span>${item.title}</span><span class="archive-date mono-font">[${item.date}]</span></li>`).join('');
+            // FILTRO ANCHE NELL'ARCHIVIO
+            if (allItems.length > 0) {
+                archiveList.innerHTML = allItems.map(item => {
+                    if (!item.title || item.title === "SYSTEM ONLINE") return '';
+                    return `<li class="archive-item"><span>${item.title}</span><span class="archive-date mono-font">[${item.date}]</span></li>`;
+                }).join('');
+            }
         }
     </script>
 </body>
