@@ -12,26 +12,18 @@ import google.generativeai as genai
 API_KEY = os.environ.get("GEMINI_API_KEY")
 print("------------------------------------------------")
 if API_KEY:
-    print("✅ DEBUG: Chiave API trovata. Inizializzazione Velvet Terminal...")
+    print("✅ DEBUG: Chiave API trovata.")
     genai.configure(api_key=API_KEY)
-    # MODELLO CORRETTO: GEMINI 2.0 FLASH
+    # MODELLO STABILE
     model = genai.GenerativeModel('gemini-2.0-flash') 
 else:
-    print("❌ DEBUG: NESSUNA CHIAVE TROVATA. Sistema offline.")
+    print("❌ DEBUG: NESSUNA CHIAVE TROVATA.")
 print("------------------------------------------------")
 
 # --- FONTI RSS (RECENSIONI VERE) ---
 SOURCES = {
-    # Roger Ebert & Guardian Film Reviews (Solo film usciti)
-    "CINEMA": [
-        "https://www.rogerebert.com/feed/reviews", 
-        "https://www.theguardian.com/film/rss"
-    ],
-    # Pitchfork & NME Reviews (Solo album usciti)
-    "MUSIC": [
-        "https://pitchfork.com/rss/reviews/albums/", 
-        "https://www.nme.com/reviews/feed"
-    ]
+    "CINEMA": ["https://www.rogerebert.com/feed/reviews", "https://www.theguardian.com/film/rss"],
+    "MUSIC": ["https://pitchfork.com/rss/reviews/albums/", "https://www.nme.com/reviews/feed"]
 }
 
 # --- UTILITÀ ---
@@ -39,11 +31,8 @@ def load_existing_data():
     try:
         with open("data.js", "r", encoding="utf-8") as f:
             content = f.read().replace("const mshData = ", "").replace(";", "")
-            data = json.loads(content)
-            if "cinema" not in data: data["cinema"] = []
-            if "music" not in data: data["music"] = []
-            return data
-    except Exception as e:
+            return json.loads(content)
+    except:
         return {"cinema": [], "music": []}
 
 def extract_json(text):
@@ -57,50 +46,29 @@ def extract_json(text):
 # --- AI ---
 def generate_review(category, news_items):
     if not API_KEY: return None
-    
-    # Se abbiamo news dal feed, le usiamo come spunto
-    titles_context = ""
-    if news_items:
-        titles_context = "\n".join([f"- {item['title']}" for item in news_items[:8]])
+    titles_context = "\n".join([f"- {item['title']}" for item in news_items[:8]]) if news_items else ""
     
     if category == "CINEMA":
         role = "Critico Cinematografico d'Essai (Marte 2050)"
-        task = """
-        Scegli DALLA LISTA un film che è APPENA USCITO (Recensione).
-        Se la lista contiene solo gossip o è vuota, IGNORALA e scegli tu un film importante uscito realmente sulla Terra negli ultimi 3-6 mesi (es. un film di Nolan, Villeneuve, Lanthimos, blockbuster o indie acclamato).
-        Devi recensire un film che il lettore può guardare OGGI.
-        """
+        task = "Scegli un film RECENTE. Scrivi una recensione critica, tagliente e sofisticata."
     else:
         role = "Critico Musicale Underground (Marte 2050)"
-        task = """
-        Scegli DALLA LISTA un album APPENA USCITO.
-        Se la lista è vuota, scegli tu un album importante uscito negli ultimi 3 mesi (Rock, Elettronica, Rap, Indie).
-        Devi recensire musica che il lettore può ascoltare OGGI.
-        """
+        task = "Scegli un album RECENTE. Scrivi una recensione tecnica, emotiva e profonda."
 
     prompt = f"""
-    Sei {role} per la rivista "VELVET".
-    
-    Spunti dai Feed RSS (se utili): 
-    {titles_context}
-
-    COMPITO:
+    Sei {role} per "VELVET". Spunti: {titles_context}
     {task}
-    
-    REGOLE SCRITTURA:
-    1. Scrivi una VERA recensione critica (100-130 parole).
-    2. Parla di regia, fotografia, suono (se Cinema) o produzione, mix, vibes (se Musica).
-    3. Tono: Competente, leggermente distaccato, spaziale.
-    4. Niente riassunti della trama. Solo critica pura.
-    5. Inserisci un VOTO in decimi.
-
-    OUTPUT JSON OBBLIGATORIO:
+    REGOLE:
+    1. Scrivi 100-120 parole.
+    2. Niente immagini. Solo testo puro.
+    3. Inserisci un VOTO (es. 8.5/10).
+    OUTPUT JSON:
     {{
-        "title": "Titolo della Recensione (IN ITALIANO, es: 'IL RITORNO DEL RE')",
-        "author": "Nome del Critico (es. Xylar V.)",
-        "excerpt": "Il testo completo della recensione...",
-        "vote": "Voto (es. 8.5/10)",
-        "streaming_search_query": "Titolo esatto film/album per ricerca"
+        "title": "Titolo Recensione ITA",
+        "author": "Nome Critico",
+        "excerpt": "Testo recensione...",
+        "vote": "8/10",
+        "streaming_search_query": "Titolo film/album esatto"
     }}
     """
     try:
@@ -110,13 +78,25 @@ def generate_review(category, news_items):
         print(f"Errore AI: {e}")
         return None
 
+# --- PULIZIA DATABASE ---
+def clean_data(data_list):
+    # Rimuove placeholder e duplicati
+    cleaned = []
+    seen = set()
+    for item in data_list:
+        t = item.get("title", "")
+        # SE IL TITOLO È 'SYSTEM ONLINE' LO BUTTA VIA
+        if t and t != "SYSTEM ONLINE" and t not in seen:
+            cleaned.append(item)
+            seen.add(t)
+    return cleaned[:10] # Max 10 items
+
 # --- ESECUZIONE ---
-print("--- INIZIO SCANSIONE VELVET (GEMINI 2.0) ---")
+print("--- INIZIO SCANSIONE ---")
 ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 headers = {'User-Agent': 'Mozilla/5.0'}
 news_basket = {"CINEMA": [], "MUSIC": []}
 
-# Scarica Feed
 for cat, urls in SOURCES.items():
     print(f"📡 Scansione {cat}...")
     for url in urls:
@@ -126,7 +106,7 @@ for cat, urls in SOURCES.items():
                 tree = ET.fromstring(response.read())
                 items = tree.findall(".//item")
                 if not items: items = tree.findall("{http://purl.org/rss/1.0/}item")
-                for item in items[:5]: 
+                for item in items[:5]:
                     t = item.find("title").text
                     news_basket[cat].append({"title": t})
         except: pass
@@ -134,25 +114,24 @@ for cat, urls in SOURCES.items():
 current_data = load_existing_data()
 today_str = datetime.now().strftime("%d.%m.%Y")
 
-# Genera Cinema
-print("🧠 Elaborazione Critica Cinema...")
+print("🧠 Elaborazione Cinema...")
 c_rev = generate_review("CINEMA", news_basket["CINEMA"])
 if c_rev and c_rev.get("title"): 
     c_rev["date"] = today_str
     current_data["cinema"].insert(0, c_rev)
-    current_data["cinema"] = current_data["cinema"][:10] 
-    print(f"✅ Cinema aggiunto: {c_rev['title']}")
 
-# Genera Musica
-print("🧠 Elaborazione Critica Musica...")
+# APPLICA PULIZIA
+current_data["cinema"] = clean_data(current_data["cinema"])
+
+print("🧠 Elaborazione Musica...")
 m_rev = generate_review("MUSIC", news_basket["MUSIC"])
 if m_rev and m_rev.get("title"): 
     m_rev["date"] = today_str
     current_data["music"].insert(0, m_rev)
-    current_data["music"] = current_data["music"][:10] 
-    print(f"✅ Musica aggiunta: {m_rev['title']}")
 
-# SALVATAGGIO
+# APPLICA PULIZIA
+current_data["music"] = clean_data(current_data["music"])
+
 json_output = json.dumps(current_data, indent=4)
 with open("data.js", "w", encoding="utf-8") as f:
     f.write(f"const mshData = {json_output};")
