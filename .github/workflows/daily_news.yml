@@ -29,8 +29,8 @@ jobs:
     - name: Run Martian Bot
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      # IMPORTANTE: Esegue il file nella cartella principale
-      run: python editorial_bot.py
+      # ECCO LA CORREZIONE: GLI DICO DI CERCARE DENTRO LA CARTELLA SCRIPTS
+      run: python scripts/editorial_bot.py
 
     - name: Commit & Publish
       run: |
@@ -38,6 +38,5 @@ jobs:
         git config --global user.email 'bot@velvet.com'
         git add data.js
         git diff --quiet && git diff --staged --quiet || git commit -m "Velvet Update"
-        # COMANDO MAGICO PER EVITARE L'ERRORE DI PRIMA:
         git pull --rebase origin main
-        git push
+        git pushh
