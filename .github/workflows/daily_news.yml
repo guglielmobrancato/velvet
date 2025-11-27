@@ -1,50 +1,39 @@
-name: Redazione Marte Velvet
+name: VELVET Martian Bot
 
 on:
   schedule:
-    # Esegue ogni giorno alle 08:00 UTC (le 09:00 o 10:00 in Italia)
-    - cron: '0 8 * * *'
-  workflow_dispatch: # Permette di avviarlo a mano per testare
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  daily-transmission:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Dà il permesso al bot di scrivere nel repo
 
     steps:
-    - name: Checkout del codice
-      uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Imposta Python
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11' # Versione aggiornata per Gemini
+        python-version: '3.11'
 
-    - name: Installa librerie
+    - name: Install Dependencies
       run: |
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install --upgrade google-generativeai
 
-    - name: Esegui Editoriale Bot
+    - name: Run Martian Bot
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: |
-        python scripts/editorial_bot.py
+      run: python bot.py
 
-    - name: Salva modifiche e pubblica
+    - name: Commit & Publish
       run: |
-        git config --global user.name 'MarteVelvet Bot'
-        git config --global user.email 'bot@martevelvet.com'
-        
-        # Aggiunge TUTTI i file modificati (news, marquee, ecc.)
-        git add .
-        
-        # Crea il commit solo se ci sono modifiche
-        git commit -m "Nuovo articolo generato da Gemini" || echo "Nessuna modifica da salvare"
-        
-        # FONDAMENTALE: Scarica le modifiche remote prima di caricare le nuove
-        # Questo evita l'errore "rejected" che hai visto prima
-        git pull --rebase origin main
-        
-        # Carica tutto online
-        git push
+        git config --global user.name 'Velvet Bot'
+        git config --global user.email 'bot@velvet.com'
+        git add data.js
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Velvet Update" && git push)
