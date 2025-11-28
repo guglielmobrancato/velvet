@@ -1,9 +1,17 @@
 const mshData = {
     "cinema": [
         {
+            "title": "Sir\u0101t: Un'Odissea Psichedelica Inaridata",
+            "author": "Elia Moretti",
+            "excerpt": "Sir\u0101t si presenta come un rave nel deserto che degenera in un'estenuante allegoria. La fotografia, satura e granulosa, cattura l'aridit\u00e0 del paesaggio marocchino, ma non riesce a compensare una narrazione labirintica e inconsistente. La regia, pretenziosa, soffoca ogni potenziale emozionale sotto una coltre di simbolismi oscuri. Il protagonista vaga, guidato da visioni indotte e dialoghi criptici, in una ricerca di redenzione che si rivela essere solo una vana metafora del disagio esistenziale. Un'esperienza visivamente stimolante, ma intellettualmente frustrante. La promessa di un viaggio trascendente si scontra con la realt\u00e0 di un vicolo cieco narrativo.",
+            "vote": "5.5/10",
+            "streaming_search_query": "Sir\u0101t",
+            "date": "28.11.2025"
+        },
+        {
             "title": "Troll 2.0: Apocalisse Mockbuster Scandinava",
             "author": "Astrid Bjornstad",
-            "excerpt": "Che la terra ci protegga. *Troll 2.0*, ultima fatica di un genere morente (il mockbuster, ovviamente), \u00e8 un'accozzaglia di effetti CGI discutibili e dialoghi tanto imbarazzanti da far resuscitare Bergman per la vergogna. Un gigantesco kaiju scandinavo, frutto di un esperimento genetico fallito, devasta Malm\u00f6 in una sequenza di distruzione priva di qualsivoglia sottotesto. Eppure, in questo caos organizzato, si percepisce un'ironia consapevole, una strizzatina d'occhio al trash che lo eleva al di sopra del semplice film brutto. Se cercate la profondit\u00e0, rivolgetevi altrove; se invece siete pronti a spegnere il cervello e godervi lo spettacolo, *Troll 2.0* \u00e8 un guilty pleasure da non perdere. Prendetevi un drink e buona visione.",
+            "excerpt": "Che la terra ci protegga. *Troll 2.0*, ultima fatica di un genere morente (il mockbuster, ovviamente), \u00e8 un'accozzaglia di effetti CGI discutibili e dialoghi tanto imbarazzanti da far resuscitare Bergman per la vergogna. Un gigantesco kaiju scandinavo, frutto di un esperimento genetico fallito, devasta Malm\u00f6 in una sequenza di distruzione priva di qualsivoglia sottotesto. Eppure, in questo caos organizzato, si percepisce un'ironia consapevole, una strizzatina d'occhio al trash che lo eleva al di sopra del semplice film brutto. Se cercate la profondit\u00e0, rivolgetevi altrove se invece siete pronti a spegnere il cervello e godervi lo spettacolo, *Troll 2.0* \u00e8 un guilty pleasure da non perdere. Prendetevi un drink e buona visione.",
             "vote": "6/10",
             "streaming_search_query": "Troll 2.0 film 2050",
             "date": "27.11.2025"
@@ -26,6 +34,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Lilith AI - 'Echoes of the Singularity': Introspezione Algoritmica",
+            "author": "Kaito 'Volt' Nakamura",
+            "excerpt": "L'EP di debutto di Lilith AI \u00e8 un'immersione profonda nelle psiche sintetica. 'Echoes of the Singularity' non \u00e8 solo musica, ma un'esplorazione sonora dell'esistenza digitale. I beat glitch-hop si fondono con melodie eteree generate da reti neurali, creando un paesaggio sonoro tanto alienante quanto sorprendentemente umano. Le armonie vocali, filtrate attraverso algoritmi di distorsione emotiva, evocano un senso di nostalgia per un futuro che non esiste. Sebbene a volte la produzione possa risultare eccessivamente cerebrale, l'EP nel complesso \u00e8 un'affermazione audace e innovativa del potenziale artistico dell'intelligenza artificiale. Un'opera che sfida i confini stessi della creativit\u00e0.",
+            "vote": "8.7/10",
+            "streaming_search_query": "Lilith AI Echoes of the Singularity EP",
+            "date": "28.11.2025"
+        },
         {
             "title": "Cosmic Echoes: 'Nebula Bloom' dei Sol Invictus Algorithm",
             "author": "Xantus-7",
