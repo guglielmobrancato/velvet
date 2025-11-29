@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "L'Ombra della Camera: Quando la Storia Rivendica il Focus",
+            "author": "Elara Vance",
+            "excerpt": "Il 'We have to be able to ask difficult questions' trova eco potente ne *L'Ombra della Camera*, bio-pic disturbante su Nick Ut, fotografo premio Pulitzer. Anzich\u00e9 celebrare il mito del singolo eroe, il film scompone l'atto fotografico. La regia di Anya Sharma interroga l'etica dell'immagine, trasformando Ut da protagonista a strumento di una narrazione ben pi\u00f9 vasta. L'angoscia di Phan Th\u1ecb Kim Ph\u00fac, la bambina del napalm, diviene un'ombra incombente sul processo creativo, erodendo la retorica della verit\u00e0 oggettiva. Un'opera necessaria, bench\u00e9 scomoda, che ci ricorda come ogni immagine sia un compromesso. La colonna sonora rarefatta di Reznor e Ross amplifica il senso di colpa latente.",
+            "vote": "7.8/10",
+            "streaming_search_query": "L'Ombra della Camera (2049)",
+            "date": "29.11.2025"
+        },
+        {
             "title": "Sir\u0101t: Un'Odissea Psichedelica Inaridata",
             "author": "Elia Moretti",
             "excerpt": "Sir\u0101t si presenta come un rave nel deserto che degenera in un'estenuante allegoria. La fotografia, satura e granulosa, cattura l'aridit\u00e0 del paesaggio marocchino, ma non riesce a compensare una narrazione labirintica e inconsistente. La regia, pretenziosa, soffoca ogni potenziale emozionale sotto una coltre di simbolismi oscuri. Il protagonista vaga, guidato da visioni indotte e dialoghi criptici, in una ricerca di redenzione che si rivela essere solo una vana metafora del disagio esistenziale. Un'esperienza visivamente stimolante, ma intellettualmente frustrante. La promessa di un viaggio trascendente si scontra con la realt\u00e0 di un vicolo cieco narrativo.",
@@ -34,6 +42,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Arkhitect - 'Neural Echoes' EP: Quando l'Algoritmo Sogna",
+            "author": "Kira Nova",
+            "excerpt": "Arkhitect, il duo synthwave di Neo-Berlino, ritorna con 'Neural Echoes', un EP che fonde nostalgia per gli anni '80 con inquietanti visioni del futuro. La produzione \u00e8 chirurgica, ogni synth un bisturi che incide melodie fredde ma sorprendentemente umane. Tuttavia, l'emozione \u00e8 sottile, quasi subliminale. Nonostante la maestria tecnica, a volte si percepisce una certa rigidit\u00e0, un eccessivo controllo. Eppure, la traccia finale, 'Ghost in the Machine', lascia presagire un potenziale inespresso, un'anima che cerca disperatamente di emergere dalla perfezione algoritmica. Un ascolto stimolante, ma che lascia con la voglia di qualcosa di pi\u00f9 viscerale.",
+            "vote": "7.8/10",
+            "streaming_search_query": "Arkhitect Neural Echoes EP",
+            "date": "29.11.2025"
+        },
         {
             "title": "Lilith AI - 'Echoes of the Singularity': Introspezione Algoritmica",
             "author": "Kaito 'Volt' Nakamura",
