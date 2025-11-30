@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "L'Ombra dell'Assenza: 'Echo Chamber' e la Riproduzione del Trauma Coloniale",
+            "author": "Isabella Rossi",
+            "excerpt": "Il tanto atteso adattamento di 'L'\u00c9tranger' di Camus, intitolato 'Echo Chamber', si rivela un'operazione ambiziosa quanto problematica. La regia di Dubois tenta di modernizzare il testo, trasferendo le atmosfere algide di Algeri in una Marsiglia iper-tecnologica. Il Meursault di Diop \u00e8 innegabilmente carismatico, ma l'iper-stilizzazione visiva e la colonna sonora invadente soffocano la potenza del silenzio camusiano. Il film si concentra eccessivamente sulla questione coloniale, diluendo l'universalit\u00e0 del personaggio in una retorica post-coloniale a volte didascalica. Resta un'opera interessante, ma manca l'essenziale: la vertigine dell'assurdo. La domanda \u00e8: era davvero necessario? ",
+            "vote": "6.8/10",
+            "streaming_search_query": "Echo Chamber Dubois",
+            "date": "30.11.2025"
+        },
+        {
             "title": "L'Ombra della Camera: Quando la Storia Rivendica il Focus",
             "author": "Elara Vance",
             "excerpt": "Il 'We have to be able to ask difficult questions' trova eco potente ne *L'Ombra della Camera*, bio-pic disturbante su Nick Ut, fotografo premio Pulitzer. Anzich\u00e9 celebrare il mito del singolo eroe, il film scompone l'atto fotografico. La regia di Anya Sharma interroga l'etica dell'immagine, trasformando Ut da protagonista a strumento di una narrazione ben pi\u00f9 vasta. L'angoscia di Phan Th\u1ecb Kim Ph\u00fac, la bambina del napalm, diviene un'ombra incombente sul processo creativo, erodendo la retorica della verit\u00e0 oggettiva. Un'opera necessaria, bench\u00e9 scomoda, che ci ricorda come ogni immagine sia un compromesso. La colonna sonora rarefatta di Reznor e Ross amplifica il senso di colpa latente.",
@@ -42,6 +50,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Anais \u2013 'Voidwalker' EP: Elettronica Emozionale dalle Profondit\u00e0 Cosmiche",
+            "author": "Kira Nova",
+            "excerpt": "Anais emerge dalle nebulose digitali con 'Voidwalker', un EP che fonde techno minimale con atmosfere ambientali profondamente emotive. I synth pulsano come cuori artificiali, mentre la voce di Anais, eterea e distante, narra storie di solitudine spaziale. Ogni traccia \u00e8 un viaggio interstellare attraverso paesaggi sonori inesplorati, a volte freddi e spietati, a volte sorprendentemente intimi. Pur mantenendo un'estetica controllata e un'esecuzione tecnica impeccabile, l'EP a volte pecca di prevedibilit\u00e0, rischiando di perdersi nell'immensit\u00e0 del cosmo sonoro. Un debutto promettente, ma con spazio per maggiore audacia narrativa.",
+            "vote": "7.8/10",
+            "streaming_search_query": "Anais Voidwalker EP",
+            "date": "30.11.2025"
+        },
         {
             "title": "Arkhitect - 'Neural Echoes' EP: Quando l'Algoritmo Sogna",
             "author": "Kira Nova",
