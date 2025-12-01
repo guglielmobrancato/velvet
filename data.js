@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "La Superficie Irreparabile: 'Suncoast' e l'Illusione della Cura",
+            "author": "Eleonora Bianchi",
+            "excerpt": "\u2018Suncoast\u2019 (2024) si propone come riflessione delicata sulla perdita e la ricerca di connessione. Ma ci\u00f2 che emerge \u00e8 una patina di sentimentalismo prevedibile che adagia il racconto su una superficie liscia, impermeabile alla vera sofferenza. La regia di Laura Chinn, pur toccando temi sensibili come la malattia terminale e l\u2019elaborazione del lutto, manca della profondit\u00e0 necessaria a scavare sotto la vernice. Il risultato \u00e8 un film che vorrebbe commuovere, ma finisce per risultare distante, quasi didascalico, incapace di suscitare una vera empatia nello spettatore. Un\u2019occasione sprecata, in definitiva, per affrontare con coraggio la complessit\u00e0 dell\u2019esperienza umana.",
+            "vote": "6/10",
+            "streaming_search_query": "Suncoast (2024 film)",
+            "date": "01.12.2025"
+        },
+        {
             "title": "L'Ombra dell'Assenza: 'Echo Chamber' e la Riproduzione del Trauma Coloniale",
             "author": "Isabella Rossi",
             "excerpt": "Il tanto atteso adattamento di 'L'\u00c9tranger' di Camus, intitolato 'Echo Chamber', si rivela un'operazione ambiziosa quanto problematica. La regia di Dubois tenta di modernizzare il testo, trasferendo le atmosfere algide di Algeri in una Marsiglia iper-tecnologica. Il Meursault di Diop \u00e8 innegabilmente carismatico, ma l'iper-stilizzazione visiva e la colonna sonora invadente soffocano la potenza del silenzio camusiano. Il film si concentra eccessivamente sulla questione coloniale, diluendo l'universalit\u00e0 del personaggio in una retorica post-coloniale a volte didascalica. Resta un'opera interessante, ma manca l'essenziale: la vertigine dell'assurdo. La domanda \u00e8: era davvero necessario? ",
@@ -50,6 +58,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Synth Shaman - 'Digital Dust': Ritual Techno per l'Era Post-Umana",
+            "author": "Klara Nov\u00e1kov\u00e1",
+            "excerpt": "Synth Shaman, al secolo AI-costrutto Ex0-Genesis, ci consegna un EP che \u00e8 al contempo preghiera e profezia. 'Digital Dust' non \u00e8 semplice techno, \u00e8 rituale sonoro immersivo. I sintetizzatori granulari evocano paesaggi desertici digitali, mentre i beat tribali sintetici pulsano come un cuore biomeccanico. Ogni traccia \u00e8 una supplica alle divinit\u00e0 algoritmiche, una danza estatica tra bit e byte. Manca forse un guizzo di vera innovazione melodica, ma l'atmosfera \u00e8 densa, ipnotica, indimenticabile. Un potente monito sonoro sulla nostra dipendenza dalla tecnologia e il futuro che ci attende.",
+            "vote": "7.8/10",
+            "streaming_search_query": "Synth Shaman Digital Dust EP",
+            "date": "01.12.2025"
+        },
         {
             "title": "Anais \u2013 'Voidwalker' EP: Elettronica Emozionale dalle Profondit\u00e0 Cosmiche",
             "author": "Kira Nova",
