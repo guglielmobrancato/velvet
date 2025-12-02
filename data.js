@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "Echi di Vetro: 'Memorie Cibernetiche' e la Frantumazione dell'Anima",
+            "author": "Elara Vance",
+            "excerpt": "Nei frammenti lucidi di 'Memorie Cibernetiche', il regista Kai Ito orchestra una sinfonia distopica dove la tecnologia non eleva, ma erode. Il film, ambientato in una Neo-Kyoto asfissiata da algoritmi empatici, scava nell'alienazione di individui connessi ma profondamente isolati. La regia di Ito, pur algida, \u00e8 chirurgica nel dissezionare la solitudine. Performance impeccabili, soprattutto quella di Haruki Sato, che incarna un programmatore sull'orlo del collasso emotivo. Tuttavia, la narrazione, a tratti didascalica, soffoca la poesia intrinseca del soggetto. Un'opera visivamente potente, ma concettualmente derivativa. Ricorda, fin troppo, certe angosce di un cinema passato. Peccato.",
+            "vote": "7.8/10",
+            "streaming_search_query": "Memorie Cibernetiche (2049)",
+            "date": "02.12.2025"
+        },
+        {
             "title": "La Superficie Irreparabile: 'Suncoast' e l'Illusione della Cura",
             "author": "Eleonora Bianchi",
             "excerpt": "\u2018Suncoast\u2019 (2024) si propone come riflessione delicata sulla perdita e la ricerca di connessione. Ma ci\u00f2 che emerge \u00e8 una patina di sentimentalismo prevedibile che adagia il racconto su una superficie liscia, impermeabile alla vera sofferenza. La regia di Laura Chinn, pur toccando temi sensibili come la malattia terminale e l\u2019elaborazione del lutto, manca della profondit\u00e0 necessaria a scavare sotto la vernice. Il risultato \u00e8 un film che vorrebbe commuovere, ma finisce per risultare distante, quasi didascalico, incapace di suscitare una vera empatia nello spettatore. Un\u2019occasione sprecata, in definitiva, per affrontare con coraggio la complessit\u00e0 dell\u2019esperienza umana.",
@@ -58,6 +66,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Arcane Echoes: Recensione di 'Synthgeist' dei Lumina Drift",
+            "author": "Elara Vance",
+            "excerpt": "I Lumina Drift, con 'Synthgeist', ci proiettano in un paesaggio sonoro cyberpunk inesplorato. Abbandonando le dissonanze noise dei loro esordi, il duo ora abbraccia una malinconia sintetica stratificata. Beat glitch si intrecciano con armonie eteree, evocando visioni di metropoli decadenti illuminate al neon. La voce robotica filtrata di Anya pulsa come un'intelligenza artificiale pensierosa, mentre i synth di Kai creano ambienti sonori vasti e opprimenti. Sebbene a volte si adagino su territori familiari, la padronanza tecnica e la profondit\u00e0 emotiva di 'Synthgeist' lo rendono un'esperienza immersiva e memorabile.",
+            "vote": "8.2/10",
+            "streaming_search_query": "Lumina Drift Synthgeist",
+            "date": "02.12.2025"
+        },
         {
             "title": "Synth Shaman - 'Digital Dust': Ritual Techno per l'Era Post-Umana",
             "author": "Klara Nov\u00e1kov\u00e1",
