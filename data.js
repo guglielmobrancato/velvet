@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "L'Eco del Silenzio: 'Confessioni di un Richiedente Asilo' e la Verit\u00e0 Spogliata",
+            "author": "Eleonora Bianchi",
+            "excerpt": "Il film di Gharoro-Akpojotor, 'Confessioni di un Richiedente Asilo', trascende il mero biopic. \u00c8 un'autopsia spietata del sistema di asilo, dove la privacy \u00e8 un lusso e la dignit\u00e0 una merce di scambio. Se Pillion ambisce a normalizzare il BDSM, qui la normalizzazione \u00e8 la violenza istituzionale. La regia asciutta, quasi documentaristica, amplifica la potenza del racconto, svelando la fragilit\u00e0 umana di fronte all'ingranaggio burocratico. Pi\u00f9 che una denuncia, \u00e8 un'eco lacerante che ci costringe a confrontarci con la nostra complicit\u00e0 in un sistema che deumanizza. Un pugno nello stomaco necessario, che per\u00f2 rinuncia a una vera esplorazione cinematografica, preferendo la cronaca all'arte.",
+            "vote": "7.5/10",
+            "streaming_search_query": "Confessioni di un Richiedente Asilo film",
+            "date": "03.12.2025"
+        },
+        {
             "title": "Echi di Vetro: 'Memorie Cibernetiche' e la Frantumazione dell'Anima",
             "author": "Elara Vance",
             "excerpt": "Nei frammenti lucidi di 'Memorie Cibernetiche', il regista Kai Ito orchestra una sinfonia distopica dove la tecnologia non eleva, ma erode. Il film, ambientato in una Neo-Kyoto asfissiata da algoritmi empatici, scava nell'alienazione di individui connessi ma profondamente isolati. La regia di Ito, pur algida, \u00e8 chirurgica nel dissezionare la solitudine. Performance impeccabili, soprattutto quella di Haruki Sato, che incarna un programmatore sull'orlo del collasso emotivo. Tuttavia, la narrazione, a tratti didascalica, soffoca la poesia intrinseca del soggetto. Un'opera visivamente potente, ma concettualmente derivativa. Ricorda, fin troppo, certe angosce di un cinema passato. Peccato.",
@@ -66,6 +74,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Tems \u2013 'Love Is A Kingdom' EP: Un Regno di Sfumature Sonore",
+            "author": "Astrid Nova",
+            "excerpt": "Tems non si limita a cantare l'amore, lo disseziona in 'Love Is A Kingdom'. L'EP \u00e8 un viaggio intimo, dalla vulnerabilit\u00e0 esposta in 'Guardian Angel' alla sensualit\u00e0 eterea di 'Royal Flush'. La produzione, minimalista ma stratificata, esalta la voce di Tems, un contralto vellutato che vibra di emozione. La sua capacit\u00e0 di creare atmosfere dense con pochi elementi \u00e8 notevole. Pur breve, l'EP lascia un'impronta duratura, un promemoria che la vera forza risiede nella fragilit\u00e0 e nella capacit\u00e0 di abbracciare tutte le sfaccettature dell'amore. Un gioiello R&B dal futuro.",
+            "vote": "8.7/10",
+            "streaming_search_query": "Tems Love Is A Kingdom EP",
+            "date": "03.12.2025"
+        },
         {
             "title": "Arcane Echoes: Recensione di 'Synthgeist' dei Lumina Drift",
             "author": "Elara Vance",
