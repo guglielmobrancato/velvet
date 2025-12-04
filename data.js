@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "Oh. Che. Noia.: Un Tacchino Natalizio indigesto con Michelle Pfeiffer",
+            "author": "Elettra Marconi",
+            "excerpt": "L'entusiasmo per un film natalizio con Michelle Pfeiffer si \u00e8 infranto come una pallina di vetro sull'asfalto. *Oh. What. Fun.* si presenta come un'accozzaglia di clich\u00e9 festivi, priva di mordente e originalit\u00e0. La Pfeiffer, pur luminosa come sempre, non riesce a salvare una sceneggiatura insipida e una regia pigra. Sembra che Amazon abbia voluto cavalcare l'onda del consumismo natalizio senza un'idea precisa, confezionando un prodotto mediocre che dimenticheremo prima ancora che il panettone sia finito. Un'occasione sprecata, un vero peccato capitale per i cinefili affezionati. La prossima volta, preferisco rivedermi *Gremlins*.",
+            "vote": "4/10",
+            "streaming_search_query": "Oh. What. Fun. Amazon",
+            "date": "04.12.2025"
+        },
+        {
             "title": "L'Eco del Silenzio: 'Confessioni di un Richiedente Asilo' e la Verit\u00e0 Spogliata",
             "author": "Eleonora Bianchi",
             "excerpt": "Il film di Gharoro-Akpojotor, 'Confessioni di un Richiedente Asilo', trascende il mero biopic. \u00c8 un'autopsia spietata del sistema di asilo, dove la privacy \u00e8 un lusso e la dignit\u00e0 una merce di scambio. Se Pillion ambisce a normalizzare il BDSM, qui la normalizzazione \u00e8 la violenza istituzionale. La regia asciutta, quasi documentaristica, amplifica la potenza del racconto, svelando la fragilit\u00e0 umana di fronte all'ingranaggio burocratico. Pi\u00f9 che una denuncia, \u00e8 un'eco lacerante che ci costringe a confrontarci con la nostra complicit\u00e0 in un sistema che deumanizza. Un pugno nello stomaco necessario, che per\u00f2 rinuncia a una vera esplorazione cinematografica, preferendo la cronaca all'arte.",
@@ -74,6 +82,14 @@ const mshData = {
         }
     ],
     "music": [
+        {
+            "title": "Tems \u2013 'Love Is A Kingdom' EP: Amore in Pixel e Carne",
+            "author": "Klara 'K-OS' Obasi",
+            "excerpt": "Tems non si limita a cantare l'amore, lo viviseziona in 'Love Is A Kingdom'. L'EP, pur breve, \u00e8 un'esplorazione stratificata di desiderio, perdita e redenzione. La produzione, un mix di R&B futuristico e ritmi ancestrali, crea un'atmosfera ipnotica. La voce di Tems, roca e potente, trasmette un'intensit\u00e0 emotiva palpabile, anche attraverso filtri digitali. Alcune transizioni risultano brusche, sacrificando fluidit\u00e0 in favore di un impatto immediato, ma nel complesso l'EP \u00e8 un'esperienza coinvolgente che lascia il segno. Un passo avanti audace e maturo nel percorso di un'artista in continua evoluzione.",
+            "vote": "8.2/10",
+            "streaming_search_query": "Tems Love Is A Kingdom EP",
+            "date": "04.12.2025"
+        },
         {
             "title": "Tems \u2013 'Love Is A Kingdom' EP: Un Regno di Sfumature Sonore",
             "author": "Astrid Nova",
