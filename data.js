@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "\u201cIl Problema dei Tre Corpi\u201d: Un Universo di Potenzialit\u00e0 Sprecate",
+            "author": "Elara Vance",
+            "excerpt": "L'adattamento di Netflix de \u201cIl Problema dei Tre Corpi\u201d \u00e8 un esperimento audace che purtroppo inciampa. Sebbene i creatori abbiano abilmente traslato l'intricata trama dalla pagina allo schermo, l'eccessiva semplificazione per un pubblico mainstream sacrifica la profondit\u00e0 filosofica e l'ambiguit\u00e0 morale che rendevano l'opera di Liu Cixin cos\u00ec avvincente. I personaggi, ridotti a stereotipi funzionali, perdono la loro umanit\u00e0. Rimane un'esperienza visivamente stimolante, ma intellettualmente insoddisfacente. Un'occasione persa per esplorare le implicazioni esistenziali dell'incontro con l'ignoto.",
+            "vote": "6/10",
+            "streaming_search_query": "Il Problema dei Tre Corpi Netflix",
+            "date": "05.12.2025"
+        },
+        {
             "title": "Oh. Che. Noia.: Un Tacchino Natalizio indigesto con Michelle Pfeiffer",
             "author": "Elettra Marconi",
             "excerpt": "L'entusiasmo per un film natalizio con Michelle Pfeiffer si \u00e8 infranto come una pallina di vetro sull'asfalto. *Oh. What. Fun.* si presenta come un'accozzaglia di clich\u00e9 festivi, priva di mordente e originalit\u00e0. La Pfeiffer, pur luminosa come sempre, non riesce a salvare una sceneggiatura insipida e una regia pigra. Sembra che Amazon abbia voluto cavalcare l'onda del consumismo natalizio senza un'idea precisa, confezionando un prodotto mediocre che dimenticheremo prima ancora che il panettone sia finito. Un'occasione sprecata, un vero peccato capitale per i cinefili affezionati. La prossima volta, preferisco rivedermi *Gremlins*.",
@@ -71,17 +79,17 @@ const mshData = {
             "vote": "6.8/10",
             "streaming_search_query": "Sir\u0101t",
             "date": "27.11.2025"
-        },
-        {
-            "title": "Dune: Parte Due - Sinfonia di Sabbia e Silenzio",
-            "author": "Xylar V.",
-            "excerpt": "Villeneuve cesella un'opera maestosa con *Dune: Parte Due*, elevando il franchise a vette inesplorate. La regia \u00e8 impeccabile, orchestrando sequenze d'azione epiche e momenti di silenzio contemplativo con eguale maestria. La fotografia di Greig Fraser \u00e8 una carezza visiva, trasformando il deserto di Arrakis in un protagonista vibrante e ostile. Hans Zimmer, dal canto suo, intesse una partitura sonora che palpita con l'anima del pianeta, un arazzo di suoni ancestrali e futuristici che amplificano ogni emozione. Tuttavia, la grandiosit\u00e0 visiva talvolta sovrasta la profondit\u00e0 emotiva dei personaggi, lasciando un retrogusto di fredda perfezione. Un'esperienza cinematografica sensoriale ineguagliabile, sebbene non priva di qualche lieve eco meccanica.",
-            "vote": "8.8/10",
-            "streaming_search_query": "Dune: Parte Due",
-            "date": "27.11.2025"
         }
     ],
     "music": [
+        {
+            "title": "Oreglo \u2013 \u2018The Whirr\u2019 EP: Jazz Digitale in Ebollizione",
+            "author": "Klara 'K' Moreau",
+            "excerpt": "Gli Oreglo non si limitano a suonare jazz; lo smembrano, lo ricodificano e lo risputano fuori con una ferocia controllata. 'The Whirr' \u00e8 un EP che pulsa come un circuito sovralimentato, dove il contrabbasso digitale dialoga con synth acidi e percussioni frammentate. L'abilit\u00e0 tecnica \u00e8 indiscutibile, ma \u00e8 l'intensit\u00e0 emotiva a catturare: una strana malinconia digitale che si insinua tra i beat spezzati. Non per i puristi, ma per chi cerca una nuova voce nel jazz futuristico, 'The Whirr' \u00e8 un'esplosione sonora da non perdere. Vibrazioni glitch perfette per una notte su Marte.",
+            "vote": "8.2/10",
+            "streaming_search_query": "Oreglo The Whirr EP",
+            "date": "05.12.2025"
+        },
         {
             "title": "Tems \u2013 'Love Is A Kingdom' EP: Amore in Pixel e Carne",
             "author": "Klara 'K-OS' Obasi",
@@ -152,14 +160,6 @@ const mshData = {
             "excerpt": "Tems fluttua ancora una volta attraverso l'etere sonoro con il suo EP 'Love Is A Kingdom', un'esplorazione dell'amore in tutte le sue forme. La produzione, pur lucida e impeccabile, a volte sembra relegare la voce di Tems in un ruolo di co-protagonista anzich\u00e9 protagonista assoluta. Alcuni brani spiccano per la loro atmosfera onirica, quasi fosse musica creata per accompagnare viaggi interstellari in realt\u00e0 virtuale. Altri, invece, si perdono in un mare di R&B contemporaneo fin troppo omogeneo. Il mix, pulito fino all'eccesso, sacrifica un po' della ruvidezza emotiva che Tems sa trasmettere. Un lavoro piacevole, ma forse fin troppo prudente per una artista del suo calibro. Un assaggio promettente, che speriamo si concretizzi in qualcosa di pi\u00f9 audace.",
             "vote": "7.2/10",
             "streaming_search_query": "Tems Love Is A Kingdom",
-            "date": "27.11.2025"
-        },
-        {
-            "title": "Odeal: L'Eleganza R&B Inespressa",
-            "author": "Kira-9",
-            "excerpt": "Odeal torna con 'The Fall That Saved Us', un EP che accarezza le orecchie con la sua produzione impeccabile e atmosfere ovattate. La voce di Odeal, vellutata e precisa, si adagia su beat minimalisti, creando un ambiente sonoro raffinato ma forse troppo prudente. Si percepisce un controllo eccessivo, una timidezza nel spingersi oltre i confini di un R&B elegante ma standardizzato. Il mix \u00e8 cristallino, la produzione lucida, ma manca quella scintilla che trasformerebbe un buon EP in un'esperienza memorabile. Un'occasione persa per osare di pi\u00f9, per sporcare la tela con colori pi\u00f9 audaci.",
-            "vote": "6.8/10",
-            "streaming_search_query": "Odeal The Fall That Saved Us EP",
             "date": "27.11.2025"
         }
     ]
