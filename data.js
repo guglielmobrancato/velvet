@@ -1,6 +1,14 @@
 const mshData = {
     "cinema": [
         {
+            "title": "Fackham Hall: Un Downton Abbey per l'Era dello Streaming",
+            "author": "Evelyn Dubois",
+            "excerpt": "Fackham Hall, parodia di Downton Abbey, si inserisce perfettamente nel panorama post-Netflix-Warner Bros. L'umorismo \u00e8 rapido, a volte fin troppo, e l'intera operazione sa di prodotto confezionato per brevi risate. Pur riconoscendo la bravura del cast, si percepisce un'assenza di anima, sacrificata sull'altare della velocit\u00e0 e dell'algoritmo. Un bocconcino divertente, ma vuoto, che testimonia la deriva del cinema verso il puro intrattenimento usa e getta. Perfetto per la visione distratta sul Metaverso, dimenticabile il giorno dopo.",
+            "vote": "6.5/10",
+            "streaming_search_query": "Fackham Hall 2050",
+            "date": "06.12.2025"
+        },
+        {
             "title": "\u201cIl Problema dei Tre Corpi\u201d: Un Universo di Potenzialit\u00e0 Sprecate",
             "author": "Elara Vance",
             "excerpt": "L'adattamento di Netflix de \u201cIl Problema dei Tre Corpi\u201d \u00e8 un esperimento audace che purtroppo inciampa. Sebbene i creatori abbiano abilmente traslato l'intricata trama dalla pagina allo schermo, l'eccessiva semplificazione per un pubblico mainstream sacrifica la profondit\u00e0 filosofica e l'ambiguit\u00e0 morale che rendevano l'opera di Liu Cixin cos\u00ec avvincente. I personaggi, ridotti a stereotipi funzionali, perdono la loro umanit\u00e0. Rimane un'esperienza visivamente stimolante, ma intellettualmente insoddisfacente. Un'occasione persa per esplorare le implicazioni esistenziali dell'incontro con l'ignoto.",
@@ -71,21 +79,21 @@ const mshData = {
             "vote": "6/10",
             "streaming_search_query": "Troll 2.0 film 2050",
             "date": "27.11.2025"
-        },
-        {
-            "title": "Sir\u0101t: Miraggi Sonori nel Deserto Digitale",
-            "author": "Xylar V.",
-            "excerpt": "Sir\u0101t emerge come un'esperienza audiovisiva singolare, pur inciampando in alcune delle sue ambizioni. La regia, spesso ipnotica, cattura l'aridit\u00e0 e la vastit\u00e0 del deserto marocchino con una fotografia che gioca sapientemente con luci e ombre. La colonna sonora, elemento centrale, pulsa con ritmi tribali e accenni di elettronica, creando un'atmosfera onirica e a tratti ansiogena. Tuttavia, la narrazione frammentata e la rarefazione dei dialoghi rischiano di allontanare lo spettatore, lasciandolo in un limbo di simbolismi non sempre decifrabili. Il potenziale \u00e8 evidente, ma l'esecuzione risulta a tratti discontinua. Un viaggio sensoriale intrigante, ma non del tutto compiuto.",
-            "vote": "6.8/10",
-            "streaming_search_query": "Sir\u0101t",
-            "date": "27.11.2025"
         }
     ],
     "music": [
         {
+            "title": "Dove Ellis \u2013 \u2018Blizzard\u2019: Un Gelo Generazionale",
+            "author": "Kira Nova",
+            "excerpt": "\u2018Blizzard\u2019 non \u00e8 solo un album, \u00e8 un evento atmosferico sonoro. Ellis scava nel profondo dell'angoscia post-digitale con una voce che ricorda Bjork ma con un'urgenza punk inaspettata. La produzione, curata da AI glitchata e synth gelidi, crea un paesaggio desolato eppure stranamente accogliente. I testi, frammenti di conversazioni rubate e sogni distorti, risuonano con la precariet\u00e0 della nostra esistenza. Brani come 'Binary Tears' e 'Echo Chamber' diventano inni per una generazione persa nella neve artificiale. Un debutto straordinario che congela il cuore e incendia l'anima. Assolutamente da non perdere.",
+            "vote": "9.2/10",
+            "streaming_search_query": "Dove Ellis Blizzard Album",
+            "date": "06.12.2025"
+        },
+        {
             "title": "Oreglo \u2013 \u2018The Whirr\u2019 EP: Jazz Digitale in Ebollizione",
             "author": "Klara 'K' Moreau",
-            "excerpt": "Gli Oreglo non si limitano a suonare jazz; lo smembrano, lo ricodificano e lo risputano fuori con una ferocia controllata. 'The Whirr' \u00e8 un EP che pulsa come un circuito sovralimentato, dove il contrabbasso digitale dialoga con synth acidi e percussioni frammentate. L'abilit\u00e0 tecnica \u00e8 indiscutibile, ma \u00e8 l'intensit\u00e0 emotiva a catturare: una strana malinconia digitale che si insinua tra i beat spezzati. Non per i puristi, ma per chi cerca una nuova voce nel jazz futuristico, 'The Whirr' \u00e8 un'esplosione sonora da non perdere. Vibrazioni glitch perfette per una notte su Marte.",
+            "excerpt": "Gli Oreglo non si limitano a suonare jazz lo smembrano, lo ricodificano e lo risputano fuori con una ferocia controllata. 'The Whirr' \u00e8 un EP che pulsa come un circuito sovralimentato, dove il contrabbasso digitale dialoga con synth acidi e percussioni frammentate. L'abilit\u00e0 tecnica \u00e8 indiscutibile, ma \u00e8 l'intensit\u00e0 emotiva a catturare: una strana malinconia digitale che si insinua tra i beat spezzati. Non per i puristi, ma per chi cerca una nuova voce nel jazz futuristico, 'The Whirr' \u00e8 un'esplosione sonora da non perdere. Vibrazioni glitch perfette per una notte su Marte.",
             "vote": "8.2/10",
             "streaming_search_query": "Oreglo The Whirr EP",
             "date": "05.12.2025"
@@ -152,14 +160,6 @@ const mshData = {
             "excerpt": "I Sol Invictus Algorithm, pionieri del synth-wave atmosferico, tornano con 'Nebula Bloom', un EP che espande il loro sound trademark verso territori inesplorati. Le texture sonore sono stratificate con una precisione chirurgica, evocando paesaggi sonori interstellari che ricordano le colonne sonore di 'Stranger Things', ma con un'anima pi\u00f9 riflessiva. La voce robotica, filtrata attraverso algoritmi complessi, trasmette una malinconia profonda, a tratti straziante. Nonostante la perfezione tecnica, a volte manca quella scintilla di spontaneit\u00e0 che caratterizzava i loro primi lavori. Un ascolto ipnotico, ma con margine di crescita emotiva. La title track \u00e8 un gioiello. Consigliato agli amanti di Boards of Canada e Tycho.",
             "vote": "8/10",
             "streaming_search_query": "Sol Invictus Algorithm - Nebula Bloom EP",
-            "date": "27.11.2025"
-        },
-        {
-            "title": "TEMS: 'Love Is A Kingdom' - Frammenti Stellari d'Amore",
-            "author": "Xylar V.",
-            "excerpt": "Tems fluttua ancora una volta attraverso l'etere sonoro con il suo EP 'Love Is A Kingdom', un'esplorazione dell'amore in tutte le sue forme. La produzione, pur lucida e impeccabile, a volte sembra relegare la voce di Tems in un ruolo di co-protagonista anzich\u00e9 protagonista assoluta. Alcuni brani spiccano per la loro atmosfera onirica, quasi fosse musica creata per accompagnare viaggi interstellari in realt\u00e0 virtuale. Altri, invece, si perdono in un mare di R&B contemporaneo fin troppo omogeneo. Il mix, pulito fino all'eccesso, sacrifica un po' della ruvidezza emotiva che Tems sa trasmettere. Un lavoro piacevole, ma forse fin troppo prudente per una artista del suo calibro. Un assaggio promettente, che speriamo si concretizzi in qualcosa di pi\u00f9 audace.",
-            "vote": "7.2/10",
-            "streaming_search_query": "Tems Love Is A Kingdom",
             "date": "27.11.2025"
         }
     ]
