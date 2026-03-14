@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="VELVET | Recensioni e Critica" />
+    <meta property="og:description" content="Archivio Critico di Velvet: Cinema e Audio Reviews." />
+    <meta property="og:image" content="https://velvet.martestudios.com/assets/moodboard/moodimage_20.jpg" />
+    <meta property="og:url" content="https://velvet.martestudios.com/recensioni.html" />
+    <meta property="og:type" content="website" />
+
+    <title>VELVET | Recensioni</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/velvet_magazine.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="grid-background"></div>
+
+    <nav class="global-nav">
+        <a href="index.html" class="brand">VELVET <span>// MAG</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="recensioni.html" class="active">Recensioni</a></li>
+            <li><a href="musica.html">Musica</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="eventi.html">Eventi</a></li>
+            <li><a href="chisiamo.html">Chi Siamo</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header class="hero-section" style="background-image: url('assets/moodboard/moodimage_20.jpg'); height: 300px; min-height: 300px;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="RECENSIONI">RECENSIONI</h1>
+            <p class="subtitle">CINEMA E AUDIO REVIEWS</p>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 60px;">
+        <div class="section-header">
+            <h2 class="section-title">CINEMA CRITIQUE</h2>
+        </div>
+        <div class="magazine-grid" id="cinema-container"></div>
+
+        <div class="section-header" style="margin-top: 80px;">
+            <h2 class="section-title">AUDIO REVIEWS</h2>
+        </div>
+        <div class="magazine-grid" id="music-container"></div>
+    </main>
+
+    <footer class="global-footer">
+        <p>SYSTEM BOOT // DIRECTIVE: EXPLORE // STATUS: NOMINAL</p>
+        <div class="ownership">Velvet è di proprietà di Marte Studios © 2026. All rights reserved.</div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        if (typeof mshData !== 'undefined') {
+            const cinemaCont = document.getElementById('cinema-container');
+            const musicCont = document.getElementById('music-container');
+
+            // Array of images to use for reviews since the old data has no images
+            const images = [
+                'assets/moodboard/moodimage_2.jpg',
+                'assets/moodboard/moodimage_3.jpg',
+                'assets/moodboard/moodimage_4.jpg',
+                'assets/moodboard/moodimage_5.jpg',
+                'assets/moodboard/moodimage_6.jpg',
+                'assets/moodboard/moodimage_7.jpg',
+                'assets/moodboard/moodimage_8.jpg'
+            ];
+
+            function getRandomImage() {
+                return images[Math.floor(Math.random() * images.length)];
+            }
+
+            function createArticleCard(item, type) {
+                if (!item.title || item.title === "SYSTEM ONLINE" || item.title === "N/A") return '';
+
+                let vote = item.vote || "N/A";
+                let searchUrl = type === 'music' 
+                    ? `https://open.spotify.com/search/${encodeURIComponent(item.streaming_search_query || '')}`
+                    : `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(item.streaming_search_query || '')}`;
+                
+                let actionText = type === 'music' ? 'ASCOLTA ORA' : 'GUARDA ORA';
+
+                // Usare template card da velvet_magazine.css
+                return `
+                    <article class="article-card">
+                        <div class="article-image" style="background-image: url('${getRandomImage()}');"></div>
+                        <div class="article-content">
+                            <div class="card-meta">
+                                <span class="mono-font">${item.date} // ${item.author}</span>
+                            </div>
+                            <h3 class="card-title"><a href="${searchUrl}" target="_blank">${item.title}</a></h3>
+                            <div class="card-excerpt">${item.excerpt}</div>
+                            <div class="card-footer">
+                                <span class="card-vote">${vote}</span>
+                                <a href="${searchUrl}" target="_blank" class="read-more-btn">
+                                    ${actionText} <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            if (mshData.cinema && mshData.cinema.length > 0) {
+                cinemaCont.innerHTML = mshData.cinema.map(item => createArticleCard(item, 'cinema')).join('');
+            } else {
+                cinemaCont.innerHTML = '<div style="color:#666">Nessun dato cinema.</div>';
+            }
+
+            if (mshData.music && mshData.music.length > 0) {
+                musicCont.innerHTML = mshData.music.map(item => createArticleCard(item, 'music')).join('');
+            } else {
+                musicCont.innerHTML = '<div style="color:#666">Nessun dato audio.</div>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -3,116 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELVET | Martian Media Terminal</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --bg-space: #05070a; --mars-dust: #c1440e; --neon-blue: #00f3ff; --neon-purple: #bd00ff; --glass-bg: rgba(20, 20, 30, 0.7); --text-primary: #ffffff; --text-dim: #a0a0a0; }
-        body { margin: 0; background-color: var(--bg-space); color: var(--text-primary); font-family: 'Rajdhani', sans-serif; background-image: radial-gradient(circle at top right, rgba(193, 68, 14, 0.15) 0%, transparent 40%), radial-gradient(circle at bottom left, rgba(0, 243, 255, 0.1) 0%, transparent 40%); background-attachment: fixed; }
-        h1, h2, h3, .brand { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
-        .mono-font { font-family: 'JetBrains Mono', monospace; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(5, 7, 10, 0.9); backdrop-filter: blur(10px); border-bottom: 2px solid var(--neon-blue); position: sticky; top: 0; z-index: 100; }
-        .brand { font-size: 1.8rem; font-weight: 900; } .brand span { color: var(--neon-blue); }
-        .container { max-width: 1400px; margin: 40px auto; padding: 0 20px; }
-        .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; border-bottom: 1px solid var(--glass-bg); padding-bottom: 15px; }
-        .section-title { font-size: 2rem; color: var(--neon-purple); margin: 0; text-shadow: 0 0 10px rgba(189, 0, 255, 0.5); }
-        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        
-        /* CARD SOLO TESTO */
-        .holo-card { background: rgba(15, 15, 20, 0.8); border: 1px solid rgba(0, 243, 255, 0.2); border-left: 4px solid var(--neon-blue); border-radius: 4px; overflow: hidden; transition: 0.4s; position: relative; backdrop-filter: blur(5px); padding: 25px; }
-        .holo-card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 243, 255, 0.1); transform: translateY(-3px); }
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        .card-meta { font-size: 0.8rem; color: var(--mars-dust); text-transform: uppercase; }
-        .card-vote { font-family: 'Orbitron'; font-size: 1.2rem; color: var(--neon-blue); font-weight: bold; border: 1px solid var(--neon-blue); padding: 2px 8px; border-radius: 4px; }
-        .card-title { font-size: 1.6rem; margin: 0 0 15px 0; line-height: 1.2; color: #fff; }
-        .card-excerpt { color: #ccc; font-size: 1.1rem; line-height: 1.6; text-align: justify; margin-bottom: 20px; font-weight: 300; }
-        .stream-links { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
-        .stream-btn { display: inline-flex; align-items: center; gap: 10px; color: var(--neon-blue); text-decoration: none; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
-        .stream-btn:hover { color: #fff; letter-spacing: 1px; }
-        .music-style .holo-card { border-left-color: var(--neon-purple); }
-        .music-style .card-vote, .music-style .stream-btn { color: var(--neon-purple); border-color: var(--neon-purple); }
-        .music-style .stream-btn:hover { color: #fff; }
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="VELVET | Online Magazine" />
+    <meta property="og:description" content="Astro Punk Online Magazine: Recensioni, News, Musica e Ricerca." />
+    <meta property="og:image" content="https://velvet.martestudios.com/assets/moodboard/moodimage.jpg" />
+    <meta property="og:url" content="https://velvet.martestudios.com/" />
+    <meta property="og:type" content="website" />
 
-        /* ARCHIVIO SCORREVOLE */
-        .archive-container { background: rgba(5, 7, 10, 0.8); border: 1px solid var(--mars-dust); padding: 30px; margin-top: 50px;}
-        .archive-list { list-style: none; padding: 0; max-height: 300px; overflow-y: auto; padding-right: 10px; }
-        .archive-list::-webkit-scrollbar { width: 5px; }
-        .archive-list::-webkit-scrollbar-track { background: #111; }
-        .archive-list::-webkit-scrollbar-thumb { background: var(--mars-dust); border-radius: 5px; }
-        .archive-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid rgba(193, 68, 14, 0.3); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
-        
-        footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem; margin-top: 60px; border-top: 1px solid var(--glass-bg); }
-    </style>
+    <title>VELVET | Magazine Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/velvet_magazine.css">
 </head>
 <body>
-    <nav>
-        <div class="brand">VELVET <span>// TERMINAL</span></div>
-        <div class="terminal-status mono-font">MARS LINK: ONLINE</div>
-    </nav>
-    <div class="container">
-        <div class="section-header"><i class="fas fa-film section-icon"></i><h2 class="section-title">CINEMA CRITIQUE</h2></div>
-        <div class="grid-layout" id="cinema-container"></div>
-        
-        <div class="section-header" style="margin-top: 80px;"><i class="fas fa-music section-icon" style="color: var(--neon-purple);"></i><h2 class="section-title" style="color: var(--neon-blue);">AUDIO REVIEWS</h2></div>
-        <div class="grid-layout music-style" id="music-container"></div>
-        
-        <div class="archive-container">
-             <div class="section-header" style="border-bottom: none;"><i class="fas fa-database section-icon" style="color: var(--mars-dust);"></i><h2 class="section-title" style="color: var(--mars-dust);">DATA CORE ARCHIVE</h2></div>
-            <ul class="archive-list" id="archive-list"></ul>
+    <div class="noise-overlay"></div>
+    <div class="grid-background"></div>
+
+    <nav class="global-nav">
+        <a href="index.html" class="brand">VELVET <span>// MAG</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="recensioni.html">Recensioni</a></li>
+            <li><a href="musica.html">Musica</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="eventi.html">Eventi</a></li>
+            <li><a href="chisiamo.html">Chi Siamo</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-    </div>
-    <footer><span class="mono-font">TRANSMITTING FROM MARS BASE ALPHA. VELVET CORP 2050.</span></footer>
-    
-    <script src="data.js"></script>
-    <script>
-        if (typeof mshData !== 'undefined') {
-            const cinemaCont = document.getElementById('cinema-container');
-            const musicCont = document.getElementById('music-container');
-            const archiveList = document.getElementById('archive-list');
+    </nav>
 
-            function createTextCard(item, type) {
-                // FILTRO VISIVO: NASCONDE "SYSTEM ONLINE" O TITOLI VUOTI
-                if (!item.title || item.title === "SYSTEM ONLINE" || item.title === "N/A") return '';
+    <header class="hero-section" style="background-image: url('assets/moodboard/moodimage.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="VELVET TERMINAL">VELVET TERMINAL</h1>
+            <p class="subtitle">CULTURA E INTRATTENIMENTO NELL'ERA ASTRO PUNK</p>
+            <div class="glow-line"></div>
+        </div>
+    </header>
 
-                let vote = item.vote || "N/A";
-                let searchUrl = type === 'music' 
-                    ? `https://open.spotify.com/search/${encodeURIComponent(item.streaming_search_query || '')}`
-                    : `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(item.streaming_search_query || '')}`;
-                
-                let actionText = type === 'music' ? 'ASCOLTA ORA' : 'GUARDA ORA';
+    <main class="container" style="margin-top: 60px;">
+        <div class="section-header">
+            <h2 class="section-title">L'ULTIMO NUMERO</h2>
+        </div>
 
-                return `
-                    <div class="holo-card">
-                        <div class="card-header">
-                            <span class="card-meta mono-font">${item.date} // ${item.author}</span>
-                            <span class="card-vote">${vote}</span>
-                        </div>
-                        <h3 class="card-title">${item.title}</h3>
-                        <div class="card-excerpt">${item.excerpt}</div>
-                        <div class="stream-links">
-                            <a href="${searchUrl}" target="_blank" class="stream-btn">
-                                ${actionText} <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
+        <div class="magazine-grid">
+            <!-- Article 1: News Focus -->
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('assets/moodboard/moodimage_9.jpg');"></div>
+                <div class="article-content">
+                    <div class="card-meta">
+                        <span class="mono-font">NEWS // 15 MARZO 2026</span>
                     </div>
-                `;
-            }
+                    <h3 class="card-title"><a href="news.html">Rivoluzione IA nell'arte Visiva</a></h3>
+                    <p class="card-excerpt">Le ultime implementazioni di neural networking stanno ridefinendo i limiti della creatività umana e sintetica. Scopri le news dal mondo entertainment.</p>
+                    <div class="card-footer">
+                        <a href="news.html" class="read-more-btn">Leggi News <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
 
-            if (mshData.cinema && mshData.cinema.length > 0) cinemaCont.innerHTML = mshData.cinema.map(item => createTextCard(item, 'cinema')).join('');
-            else cinemaCont.innerHTML = '<div style="color:#666">Nessun dato cinema.</div>';
+            <!-- Article 2: Reviews Focus -->
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('assets/moodboard/moodimage_20.jpg');"></div>
+                <div class="article-content">
+                    <div class="card-meta">
+                        <span class="mono-font">RECENSIONI // ARCHIVIO CRITICO</span>
+                    </div>
+                    <h3 class="card-title"><a href="recensioni.html">Cinema Critique & Audio</a></h3>
+                    <p class="card-excerpt">Accedi al nostro vasto databse di recensioni, dalle ultime uscite in streaming a chicche del passato. Analisi profonda e senza compromessi.</p>
+                    <div class="card-footer">
+                        <a href="recensioni.html" class="read-more-btn">Esplora Recensioni <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
 
-            if (mshData.music && mshData.music.length > 0) musicCont.innerHTML = mshData.music.map(item => createTextCard(item, 'music')).join('');
-            else musicCont.innerHTML = '<div style="color:#666">Nessun dato audio.</div>';
+            <!-- Article 3: Music Focus -->
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('assets/moodboard/moodimage_5.jpg');"></div>
+                <div class="article-content">
+                    <div class="card-meta">
+                        <span class="mono-font">MUSICA // SCENE CLANDESTINE</span>
+                    </div>
+                    <h3 class="card-title"><a href="musica.html">Ritmi dalla Terra a Marte</a></h3>
+                    <p class="card-excerpt">Approfondimenti sui generi musicali emergenti e le influenze del cyber-techno e astro-punk nel sound globale.</p>
+                    <div class="card-footer">
+                        <a href="musica.html" class="read-more-btn">Ascolta Ora <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
 
-            const allItems = [...(mshData.cinema || []), ...(mshData.music || [])];
-            // FILTRO ANCHE NELL'ARCHIVIO
-            if (allItems.length > 0) {
-                archiveList.innerHTML = allItems.map(item => {
-                    if (!item.title || item.title === "SYSTEM ONLINE") return '';
-                    return `<li class="archive-item"><span>${item.title}</span><span class="archive-date mono-font">[${item.date}]</span></li>`;
-                }).join('');
-            }
-        }
-    </script>
+            <!-- Article 4: Research Focus -->
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('assets/moodboard/moodimage_11.jpg');"></div>
+                <div class="article-content">
+                    <div class="card-meta">
+                        <span class="mono-font">RICERCA // ACADEMIA</span>
+                    </div>
+                    <h3 class="card-title"><a href="research.html">Sociologia del Cyber-Spazio</a></h3>
+                    <p class="card-excerpt">Papers e tesi che analizzano il comportamento sociologico all'interno di mondi virtuali e la loro estensione nella vita fisica.</p>
+                    <div class="card-footer">
+                        <a href="research.html" class="read-more-btn">Approfondisci <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <p>SYSTEM BOOT // DIRECTIVE: EXPLORE // STATUS: NOMINAL</p>
+        <div class="ownership">Velvet è di proprietà di Marte Studios © 2026. All rights reserved.</div>
+    </footer>
+
 </body>
 </html>
