@@ -7,7 +7,7 @@ const mshData = {
             "vote": "6.5/10",
             "streaming_search_query": "Fackham Hall 2050",
             "date": "06.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "\u201cIl Problema dei Tre Corpi\u201d: Un Universo di Potenzialit\u00e0 Sprecate",
@@ -16,7 +16,7 @@ const mshData = {
             "vote": "6/10",
             "streaming_search_query": "Il Problema dei Tre Corpi Netflix",
             "date": "05.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Oh. Che. Noia.: Un Tacchino Natalizio indigesto con Michelle Pfeiffer",
@@ -25,7 +25,7 @@ const mshData = {
             "vote": "4/10",
             "streaming_search_query": "Oh. What. Fun. Amazon",
             "date": "04.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "L'Eco del Silenzio: 'Confessioni di un Richiedente Asilo' e la Verit\u00e0 Spogliata",
@@ -34,7 +34,7 @@ const mshData = {
             "vote": "7.5/10",
             "streaming_search_query": "Confessioni di un Richiedente Asilo film",
             "date": "03.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Echi di Vetro: 'Memorie Cibernetiche' e la Frantumazione dell'Anima",
@@ -43,7 +43,7 @@ const mshData = {
             "vote": "7.8/10",
             "streaming_search_query": "Memorie Cibernetiche (2049)",
             "date": "02.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "La Superficie Irreparabile: 'Suncoast' e l'Illusione della Cura",
@@ -52,7 +52,7 @@ const mshData = {
             "vote": "6/10",
             "streaming_search_query": "Suncoast (2024 film)",
             "date": "01.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "L'Ombra dell'Assenza: 'Echo Chamber' e la Riproduzione del Trauma Coloniale",
@@ -61,7 +61,7 @@ const mshData = {
             "vote": "6.8/10",
             "streaming_search_query": "Echo Chamber Dubois",
             "date": "30.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "L'Ombra della Camera: Quando la Storia Rivendica il Focus",
@@ -70,7 +70,7 @@ const mshData = {
             "vote": "7.8/10",
             "streaming_search_query": "L'Ombra della Camera (2049)",
             "date": "29.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Sir\u0101t: Un'Odissea Psichedelica Inaridata",
@@ -79,7 +79,7 @@ const mshData = {
             "vote": "5.5/10",
             "streaming_search_query": "Sir\u0101t",
             "date": "28.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Troll 2.0: Apocalisse Mockbuster Scandinava",
@@ -88,7 +88,7 @@ const mshData = {
             "vote": "6/10",
             "streaming_search_query": "Troll 2.0 film 2050",
             "date": "27.11.2025",
-            "is_ai": false
+            "is_ai": true
         }
     ],
     "music": [
@@ -99,7 +99,7 @@ const mshData = {
             "vote": "9.2/10",
             "streaming_search_query": "Dove Ellis Blizzard Album",
             "date": "06.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Oreglo \u2013 \u2018The Whirr\u2019 EP: Jazz Digitale in Ebollizione",
@@ -108,7 +108,7 @@ const mshData = {
             "vote": "8.2/10",
             "streaming_search_query": "Oreglo The Whirr EP",
             "date": "05.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Tems \u2013 'Love Is A Kingdom' EP: Amore in Pixel e Carne",
@@ -117,7 +117,7 @@ const mshData = {
             "vote": "8.2/10",
             "streaming_search_query": "Tems Love Is A Kingdom EP",
             "date": "04.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Tems \u2013 'Love Is A Kingdom' EP: Un Regno di Sfumature Sonore",
@@ -126,7 +126,7 @@ const mshData = {
             "vote": "8.7/10",
             "streaming_search_query": "Tems Love Is A Kingdom EP",
             "date": "03.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Arcane Echoes: Recensione di 'Synthgeist' dei Lumina Drift",
@@ -135,7 +135,7 @@ const mshData = {
             "vote": "8.2/10",
             "streaming_search_query": "Lumina Drift Synthgeist",
             "date": "02.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Synth Shaman - 'Digital Dust': Ritual Techno per l'Era Post-Umana",
@@ -144,7 +144,7 @@ const mshData = {
             "vote": "7.8/10",
             "streaming_search_query": "Synth Shaman Digital Dust EP",
             "date": "01.12.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Anais \u2013 'Voidwalker' EP: Elettronica Emozionale dalle Profondit\u00e0 Cosmiche",
@@ -153,7 +153,7 @@ const mshData = {
             "vote": "7.8/10",
             "streaming_search_query": "Anais Voidwalker EP",
             "date": "30.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Arkhitect - 'Neural Echoes' EP: Quando l'Algoritmo Sogna",
@@ -162,7 +162,7 @@ const mshData = {
             "vote": "7.8/10",
             "streaming_search_query": "Arkhitect Neural Echoes EP",
             "date": "29.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Lilith AI - 'Echoes of the Singularity': Introspezione Algoritmica",
@@ -171,7 +171,7 @@ const mshData = {
             "vote": "8.7/10",
             "streaming_search_query": "Lilith AI Echoes of the Singularity EP",
             "date": "28.11.2025",
-            "is_ai": false
+            "is_ai": true
         },
         {
             "title": "Cosmic Echoes: 'Nebula Bloom' dei Sol Invictus Algorithm",
