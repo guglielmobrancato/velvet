@@ -494,3 +494,29 @@ footer.global-footer .ownership {
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
+
+/* Author Badges */
+.badge-author {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.badge-human {
+    background-color: rgba(255, 85, 0, 0.15);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+.badge-ai {
+    background-color: rgba(0, 255, 255, 0.15);
+    color: var(--neo-cyan);
+    border: 1px solid var(--neo-cyan);
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}

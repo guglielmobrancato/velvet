@@ -95,6 +95,10 @@
                     ? `https://open.spotify.com/search/${encodeURIComponent(item.streaming_search_query || '')}`
                     : `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(item.streaming_search_query || '')}`;
                 
+                let authorBadge = item.is_ai 
+                    ? '<span class="badge-author badge-ai"><i class="fas fa-microchip"></i> AI Author</span>' 
+                    : '<span class="badge-author badge-human"><i class="fas fa-user"></i> Human</span>';
+
                 let actionText = type === 'music' ? 'ASCOLTA ORA' : 'GUARDA ORA';
 
                 // Usare template card da velvet_magazine.css
@@ -102,7 +106,7 @@
                     <article class="article-card">
                         <div class="article-content">
                             <div class="card-meta">
-                                <span class="mono-font">${item.date} // ${item.author}</span>
+                                <span class="mono-font">${item.date} // ${item.author} ${authorBadge}</span>
                             </div>
                             <h3 class="card-title"><a href="${searchUrl}" target="_blank">${item.title}</a></h3>
                             <div class="card-excerpt">${item.excerpt}</div>
