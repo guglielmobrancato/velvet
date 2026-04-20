@@ -1,86 +1,86 @@
 const mshData = {
     "cinema": [
-        {
-            "title": "Fackham Hall: Un Downton Abbey per l'Era dello Streaming",
-            "excerpt": "Fackham Hall, parodia di Downton Abbey, si inserisce perfettamente nel panorama post-Netflix-Warner Bros. L'umorismo \u00e8 rapido, a volte fin troppo, e l'intera operazione sa di prodotto confezionato per brevi risate. Pur riconoscendo la bravura del cast, si percepisce un'assenza di anima, sacrificata sull'altare della velocit\u00e0 e dell'algoritmo. Un bocconcino divertente, ma vuoto, che testimonia la deriva del cinema verso il puro intrattenimento usa e getta. Perfetto per la visione distratta sul Metaverso, dimenticabile il giorno dopo.",
-            "vote": "6.5/10",
-            "streaming_search_query": "Fackham Hall 2050",
-            "date": "06.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "\u201cIl Problema dei Tre Corpi\u201d: Un Universo di Potenzialit\u00e0 Sprecate",
-            "excerpt": "L'adattamento di Netflix de \u201cIl Problema dei Tre Corpi\u201d \u00e8 un esperimento audace che purtroppo inciampa. Sebbene i creatori abbiano abilmente traslato l'intricata trama dalla pagina allo schermo, l'eccessiva semplificazione per un pubblico mainstream sacrifica la profondit\u00e0 filosofica e l'ambiguit\u00e0 morale che rendevano l'opera di Liu Cixin cos\u00ec avvincente. I personaggi, ridotti a stereotipi funzionali, perdono la loro umanit\u00e0. Rimane un'esperienza visivamente stimolante, ma intellettualmente insoddisfacente. Un'occasione persa per esplorare le implicazioni esistenziali dell'incontro con l'ignoto.",
-            "vote": "6/10",
-            "streaming_search_query": "Il Problema dei Tre Corpi Netflix",
-            "date": "05.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "Oh. Che. Noia.: Un Tacchino Natalizio indigesto con Michelle Pfeiffer",
-            "excerpt": "L'entusiasmo per un film natalizio con Michelle Pfeiffer si \u00e8 infranto come una pallina di vetro sull'asfalto. *Oh. What. Fun.* si presenta come un'accozzaglia di clich\u00e9 festivi, priva di mordente e originalit\u00e0. La Pfeiffer, pur luminosa come sempre, non riesce a salvare una sceneggiatura insipida e una regia pigra. Sembra che Amazon abbia voluto cavalcare l'onda del consumismo natalizio senza un'idea precisa, confezionando un prodotto mediocre che dimenticheremo prima ancora che il panettone sia finito. Un'occasione sprecata, un vero peccato capitale per i cinefili affezionati. La prossima volta, preferisco rivedermi *Gremlins*.",
-            "vote": "4/10",
-            "streaming_search_query": "Oh. What. Fun. Amazon",
-            "date": "04.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "L'Eco del Silenzio: 'Confessioni di un Richiedente Asilo' e la Verit\u00e0 Spogliata",
-            "excerpt": "Il film di Gharoro-Akpojotor, 'Confessioni di un Richiedente Asilo', trascende il mero biopic. \u00c8 un'autopsia spietata del sistema di asilo, dove la privacy \u00e8 un lusso e la dignit\u00e0 una merce di scambio. Se Pillion ambisce a normalizzare il BDSM, qui la normalizzazione \u00e8 la violenza istituzionale. La regia asciutta, quasi documentaristica, amplifica la potenza del racconto, svelando la fragilit\u00e0 umana di fronte all'ingranaggio burocratico. Pi\u00f9 che una denuncia, \u00e8 un'eco lacerante che ci costringe a confrontarci con la nostra complicit\u00e0 in un sistema che deumanizza. Un pugno nello stomaco necessario, che per\u00f2 rinuncia a una vera esplorazione cinematografica, preferendo la cronaca all'arte.",
-            "vote": "7.5/10",
-            "streaming_search_query": "Confessioni di un Richiedente Asilo film",
-            "date": "03.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "Echi di Vetro: 'Memorie Cibernetiche' e la Frantumazione dell'Anima",
-            "excerpt": "Nei frammenti lucidi di 'Memorie Cibernetiche', il regista Kai Ito orchestra una sinfonia distopica dove la tecnologia non eleva, ma erode. Il film, ambientato in una Neo-Kyoto asfissiata da algoritmi empatici, scava nell'alienazione di individui connessi ma profondamente isolati. La regia di Ito, pur algida, \u00e8 chirurgica nel dissezionare la solitudine. Performance impeccabili, soprattutto quella di Haruki Sato, che incarna un programmatore sull'orlo del collasso emotivo. Tuttavia, la narrazione, a tratti didascalica, soffoca la poesia intrinseca del soggetto. Un'opera visivamente potente, ma concettualmente derivativa. Ricorda, fin troppo, certe angosce di un cinema passato. Peccato.",
-            "vote": "7.8/10",
-            "streaming_search_query": "Memorie Cibernetiche (2049)",
-            "date": "02.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "La Superficie Irreparabile: 'Suncoast' e l'Illusione della Cura",
-            "excerpt": "\u2018Suncoast\u2019 (2024) si propone come riflessione delicata sulla perdita e la ricerca di connessione. Ma ci\u00f2 che emerge \u00e8 una patina di sentimentalismo prevedibile che adagia il racconto su una superficie liscia, impermeabile alla vera sofferenza. La regia di Laura Chinn, pur toccando temi sensibili come la malattia terminale e l\u2019elaborazione del lutto, manca della profondit\u00e0 necessaria a scavare sotto la vernice. Il risultato \u00e8 un film che vorrebbe commuovere, ma finisce per risultare distante, quasi didascalico, incapace di suscitare una vera empatia nello spettatore. Un\u2019occasione sprecata, in definitiva, per affrontare con coraggio la complessit\u00e0 dell\u2019esperienza umana.",
-            "vote": "6/10",
-            "streaming_search_query": "Suncoast (2024 film)",
-            "date": "01.12.2025",
-            "is_ai": true
-        },
-        {
-            "title": "L'Ombra dell'Assenza: 'Echo Chamber' e la Riproduzione del Trauma Coloniale",
-            "excerpt": "Il tanto atteso adattamento di 'L'\u00c9tranger' di Camus, intitolato 'Echo Chamber', si rivela un'operazione ambiziosa quanto problematica. La regia di Dubois tenta di modernizzare il testo, trasferendo le atmosfere algide di Algeri in una Marsiglia iper-tecnologica. Il Meursault di Diop \u00e8 innegabilmente carismatico, ma l'iper-stilizzazione visiva e la colonna sonora invadente soffocano la potenza del silenzio camusiano. Il film si concentra eccessivamente sulla questione coloniale, diluendo l'universalit\u00e0 del personaggio in una retorica post-coloniale a volte didascalica. Resta un'opera interessante, ma manca l'essenziale: la vertigine dell'assurdo. La domanda \u00e8: era davvero necessario? ",
-            "vote": "6.8/10",
-            "streaming_search_query": "Echo Chamber Dubois",
-            "date": "30.11.2025",
-            "is_ai": true
-        },
-        {
-            "title": "L'Ombra della Camera: Quando la Storia Rivendica il Focus",
-            "excerpt": "Il 'We have to be able to ask difficult questions' trova eco potente ne *L'Ombra della Camera*, bio-pic disturbante su Nick Ut, fotografo premio Pulitzer. Anzich\u00e9 celebrare il mito del singolo eroe, il film scompone l'atto fotografico. La regia di Anya Sharma interroga l'etica dell'immagine, trasformando Ut da protagonista a strumento di una narrazione ben pi\u00f9 vasta. L'angoscia di Phan Th\u1ecb Kim Ph\u00fac, la bambina del napalm, diviene un'ombra incombente sul processo creativo, erodendo la retorica della verit\u00e0 oggettiva. Un'opera necessaria, bench\u00e9 scomoda, che ci ricorda come ogni immagine sia un compromesso. La colonna sonora rarefatta di Reznor e Ross amplifica il senso di colpa latente.",
-            "vote": "7.8/10",
-            "streaming_search_query": "L'Ombra della Camera (2049)",
-            "date": "29.11.2025",
-            "is_ai": true
-        },
-        {
-            "title": "Sir\u0101t: Un'Odissea Psichedelica Inaridata",
-            "excerpt": "Sir\u0101t si presenta come un rave nel deserto che degenera in un'estenuante allegoria. La fotografia, satura e granulosa, cattura l'aridit\u00e0 del paesaggio marocchino, ma non riesce a compensare una narrazione labirintica e inconsistente. La regia, pretenziosa, soffoca ogni potenziale emozionale sotto una coltre di simbolismi oscuri. Il protagonista vaga, guidato da visioni indotte e dialoghi criptici, in una ricerca di redenzione che si rivela essere solo una vana metafora del disagio esistenziale. Un'esperienza visivamente stimolante, ma intellettualmente frustrante. La promessa di un viaggio trascendente si scontra con la realt\u00e0 di un vicolo cieco narrativo.",
-            "vote": "5.5/10",
-            "streaming_search_query": "Sir\u0101t",
-            "date": "28.11.2025",
-            "is_ai": true
-        },
-        {
-            "title": "Troll 2.0: Apocalisse Mockbuster Scandinava",
-            "excerpt": "Che la terra ci protegga. *Troll 2.0*, ultima fatica di un genere morente (il mockbuster, ovviamente), \u00e8 un'accozzaglia di effetti CGI discutibili e dialoghi tanto imbarazzanti da far resuscitare Bergman per la vergogna. Un gigantesco kaiju scandinavo, frutto di un esperimento genetico fallito, devasta Malm\u00f6 in una sequenza di distruzione priva di qualsivoglia sottotesto. Eppure, in questo caos organizzato, si percepisce un'ironia consapevole, una strizzatina d'occhio al trash che lo eleva al di sopra del semplice film brutto. Se cercate la profondit\u00e0, rivolgetevi altrove se invece siete pronti a spegnere il cervello e godervi lo spettacolo, *Troll 2.0* \u00e8 un guilty pleasure da non perdere. Prendetevi un drink e buona visione.",
-            "vote": "6/10",
-            "streaming_search_query": "Troll 2.0 film 2050",
-            "date": "27.11.2025",
-            "is_ai": true
-        }
-    ],
+    {
+        "title": "Super Mario Galaxy - Il Film",
+        "excerpt": "Un'esplosione cromatica iper-stimolante che cerca di replicare la magia del videogioco, ma finisce per essere un giro in giostra troppo frenetico. L'animazione è impeccabile, rasentando il fotorealismo, ma la narrativa si riduce a una sequela di gag visive. Perfetto per l'algoritmo della soglia d'attenzione di cinque secondi, ma manca l'anima esplorativa che ha reso il franchise immortale. Un prodotto ruffiano e calcolato.",
+        "vote": "6/10",
+        "streaming_search_query": "Super Mario Galaxy Il Film",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "The Drama - Un Segreto è per Sempre",
+        "excerpt": "Un thriller psicologico che promette scintille ma si perde in un labirinto di cliché visti e rivisti. La chimica tra i protagonisti è palpabile, eppure la sceneggiatura si aggroviglia cercando di essere più intelligente di quello che è. Quando il plot twist finale arriva, è più un sospiro di sollievo che uno shock. Intrattenimento passabile per un venerdì sera, ma niente che resti nella memoria a lungo termine.",
+        "vote": "5.5/10",
+        "streaming_search_query": "The Drama",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Lee Cronin - La mummia",
+        "excerpt": "Lee Cronin prende l'icona horror e la trasporta in una dimensione puramente gotico-digitale, esasperando il body horror a discapito della tensione. Se gli effetti visivi generano inquietudine, la totale assenza di empatia per i personaggi rende il tutto un mero esercizio di stile macabro. Un reboot che tenta disperatamente di essere rilevante per la Gen Alpha, ma sacrifica il mistero originale in favore del jump scare facile.",
+        "vote": "5/10",
+        "streaming_search_query": "La mummia",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "L'Ultima Missione - Project Hail Mary",
+        "excerpt": "Adattamento del best-seller di Andy Weir che funziona quando abbraccia la scienza pura, ma scivola nel sentimentalismo quando tenta di umanizzare a tutti i costi l'alienazione spaziale. Visivamente mozzafiato, con sequenze che sbancano i visori VR, ma il monologo interiore del protagonista a tratti risulta pedante. Un viaggio affascinante che farà la gioia dei tecno-ottimisti, anche se difetta del calore pionieristico dei classici del decennio scorso.",
+        "vote": "7.5/10",
+        "streaming_search_query": "Project Hail Mary",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "... che Dio perdona a tutti",
+        "excerpt": "Una commedia amara che tenta di fotografare le contraddizioni dell'Italia moderna, oscillando tra graffio autoriale e nazionalpopolare. Alcune intuizioni comiche sono brillanti e fotografano perfettamente il nostro decadimento sociale, ma il ritmo narrativo zoppica e il finale consolatorio stona con le premesse ciniche. Un'opera nostalgica che guarda troppo ai grandi del passato senza riuscire a trovare una sua voce definita.",
+        "vote": "6.5/10",
+        "streaming_search_query": "che Dio perdona a tutti",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Bts - World Tour Arirang",
+        "excerpt": "Più che un documentario musicale, una celebrazione algoritmica di un fenomeno di massa. Il montaggio adrenalinico e le performace perfette nascondono abilmente le crepe umane della macchina K-Pop. Visivamente stordente, è confezionato unicamente per rassicurare la fanbase e vendere merchandising immersivo. Un trionfo del marketing su scala planetaria che non aggiunge assolutamente nulla di nuovo al linguaggio del film-concerto.",
+        "vote": "6/10",
+        "streaming_search_query": "Bts World Tour Arirang",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Benvenuti in campagna",
+        "excerpt": "La classica parabola cittadina-incontra-provincia, riproposta per l'ennesima volta in salsa ecologista. La critica alla gentrificazione rurale si annacqua in situazioni prevedibili e macchiette locali, svuotando il messaggio di ogni reale potenziale conflittuale. Si sorride, ma si sbadiglia anche molto.",
+        "vote": "5/10",
+        "streaming_search_query": "Benvenuti in campagna",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Cena di classe",
+        "excerpt": "L'imbarazzo del ritrovo tra vecchi compagni di liceo diventa il pretesto per un kammerspiel dai toni tragicomici. Le maschere cadono puntuali come un orologio svizzero. La scrittura a tratti è tagliente e cinica, ma fatica a trovare un climax soddisfacente, adagiandosi su stereotipi di mezza età. Un esercizio crudele che diverte senza mai graffiare a fondo.",
+        "vote": "6/10",
+        "streaming_search_query": "Cena di classe",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Alla festa della rivoluzione",
+        "excerpt": "Tentativo audace ma sbilanciato di mescolare dramma storico e satira contemporanea. La messa in scena è sontuosa, ma la narrazione inciampa nel suo stesso didascalismo, cercando di spiegare il presente usando le allegorie del passato. Un'opera che avrebbe beneficiato di più sintesi e meno autocompiacimento registico.",
+        "vote": "6.5/10",
+        "streaming_search_query": "Alla festa della rivoluzione",
+        "date": "20.04.2026",
+        "is_ai": true
+    },
+    {
+        "title": "Il delitto del 3º piano",
+        "excerpt": "Un whodunit da camera dal sapore retrò, ma calato in dinamiche voyeuristiche contemporanee. La tensione regge per metà film, dopodiché scivola in territori puramente procedurali perdendo mordente. I colpi di scena si susseguono meccanici, calcolati quasi freddamente per spiazzare lo spettatore. Efficace per l'algoritmo del vero crimine, ma privo della reale suspense dei maestri del genere.",
+        "vote": "6/10",
+        "streaming_search_query": "Il delitto del 3 piano",
+        "date": "20.04.2026",
+        "is_ai": true
+    }
+],
     "music": [
         {
             "title": "Dove Ellis \u2013 \u2018Blizzard\u2019: Un Gelo Generazionale",
